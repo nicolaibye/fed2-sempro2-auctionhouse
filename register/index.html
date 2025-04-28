@@ -19,17 +19,37 @@
     <header>
         <nav>
             <a href="#"><svg src="public/AH_mobile_icon.svg" alt="Auction House Logo"></svg></a>
-            <span><svg src="./src/assets/credit.svg" alt="Credit Icon"></svg>
-                <p>333</p>
-            </span>
+            <div class="hidden md:block">
+                <ul>
+                    <li><a href="#">All auctions</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
             <div>
-                <a href=""><svg src="./src/assets/search.svg" alt="Menu Icon"></svg></a>
-                <div>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
+                <div><svg src="./src/assets/credit.svg" alt="Credit Icon"></svg>
+                    <p>333</p>
+                </div>
+                <button>+</button>
+                <div class="hidden md:block">
+                    <div class="hidden">
+                        <img src="./src/assets/profile.jpg" alt="Profile Image">
+                        <p>Log out</p>
+                    </div>
+                    <div>
+                        <p>Sign in / Register</p>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <a href=""><svg src="./src/assets/search.svg" alt="Menu Icon"></svg></a>
+                    <div>
+                        <ul>
+                            <li><a href="#">All auctions</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Sign in / Register</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
