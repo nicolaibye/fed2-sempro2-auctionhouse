@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    color: #121400;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply w-[90px] h-[32px] bg-purpleBrand text-white rounded-full outline outline-2 outline-purpleBrand -outline-offset-2 hover:bg-white hover:text-purpleBrand hover:font-medium transition-colors duration-200;
+  }
+}
