@@ -11,6 +11,7 @@ module.exports = {
       purpleBrand: "#632677",
       yellowBrand: "#ECCA44",
       lightYellowBrand: "#FFE787",
+      lightPurpleBrand: "#FBEEFF",
       greyBrand: "#8D8E80",
       blackBrand: "#121400",
       white: "#FFFFFF",
@@ -25,4 +26,3 @@ module.exports = {
   },
   plugins: [],
 };
-
