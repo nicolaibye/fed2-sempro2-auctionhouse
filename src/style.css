@@ -3,8 +3,15 @@
 @tailwind utilities;
 
 @layer base {
-  html {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: #121400;
+    font-family: work-sans, sans-serif;
   }
 }
 
@@ -19,6 +26,22 @@
   .activeBtn {
     @apply bg-purpleBrand text-white font-normal;
   }
+
+  /* .message {
+    @apply p-4 mb-6 border-2 border-peach text-dusk bg-white rounded-md text-center col-span-2;
+  }
+
+  .error {
+    @apply text-night border-red-600 bg-red-300;
+  }
+
+  .success {
+    @apply text-night border-green-700 bg-green-300;
+  }
+
+  .warning {
+    @apply text-night border-orange-500 bg-orange-300;
+  } */
 }
 
 @layer utilities {
