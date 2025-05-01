@@ -29,7 +29,7 @@ export function navHandler() {
     const mobileLogoutButton = document.getElementById("mobile-logout-button");
     mobileLogoutButton.addEventListener("click", () => {
       sessionStorage.clear();
-      window.location.reload();
+      window.location.href = "/";
     });
 
     // desktop
@@ -55,7 +55,7 @@ export function navHandler() {
     );
     desktopLogoutButton.addEventListener("click", () => {
       sessionStorage.clear();
-      window.location.reload();
+      window.location.href = "/";
     });
   }
 }
