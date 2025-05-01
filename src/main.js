@@ -1,4 +1,6 @@
 import { auctionHandler } from "./js/logic/auctions/auctionHandler";
+import { loginHandler } from "./js/logic/profile/loginHandler";
+import { registerHandler } from "./js/logic/profile/registerHandler";
 import "./style.css";
 
 function router() {
@@ -17,9 +19,11 @@ function router() {
       break;
     case "/login/":
     case "/login/index.html":
+      loginHandler();
       break;
     case "/register/":
     case "/register/index.html":
+      registerHandler();
       break;
     case "/profile/":
     case "/profile/index.html":

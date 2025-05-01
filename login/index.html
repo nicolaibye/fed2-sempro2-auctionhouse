@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../src/style.css" />
+    <script type="module" src="/src/main.js"></script>
     <title>Auction House | Login</title>
 </head>
 
@@ -84,11 +85,12 @@
             <article id="message">
             </article>
             <div class="max-w-[730px] bg-yellowBrand rounded-[20px] p-5 mt-5 mx-5 md:mx-auto">
-                <form class="flex flex-col gap-2 items-center">
+                <form id="login" class="flex flex-col gap-2 items-center">
                     <input class="bg-lightYellowBrand rounded-full p-2 px-4 w-full placeholder:text-blackBrand"
-                        type="email" placeholder="E-mail">
+                        type="email" name="email" placeholder="E-mail" pattern="^[a-zA-Z0-9._%+\-]+@stud\.noroff\.no$"
+                        title="Please use a valid Noroff email" required>
                     <input class="bg-lightYellowBrand rounded-full p-2 px-4 w-full placeholder:text-blackBrand"
-                        type="password" placeholder="Password">
+                        type="password" name="password" placeholder="Password" minlength="8" required>
                     <button class="btn m-2" type="submit">Login</button>
                     <p class="text-sm font-sans text-center">Don't have an account? <a href="/register/"
                             class="underline-offset-2 underline">Register here!</a></p>

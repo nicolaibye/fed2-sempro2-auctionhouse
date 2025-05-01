@@ -6,7 +6,6 @@ export function createAuctions(container, data) {
   if (typeof container === "string") {
     auctionsContainer = document.querySelector(container);
   }
-  console.log("createAuctionThumb", auctionsContainer, data);
 
   if (!data || data === null || data === undefined || data.length === 0) {
     displayMessage(
