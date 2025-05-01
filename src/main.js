@@ -1,7 +1,12 @@
 import { auctionHandler } from "./js/logic/auctions/auctionHandler";
 import { loginHandler } from "./js/logic/profile/loginHandler";
 import { registerHandler } from "./js/logic/profile/registerHandler";
+import { navHandler } from "./js/present/nav/navHandler";
 import "./style.css";
+
+
+
+navHandler();
 
 function router() {
   const pathname = window.location.pathname;
