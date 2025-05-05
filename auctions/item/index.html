@@ -35,7 +35,7 @@
                 </ul>
             </div>
             <div class="flex items-center gap-5">
-                <div class="flex items-center gap-1">
+                <div id="credit-amount-container" class="flex items-center gap-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="none">
                         <circle cx="7.75113" cy="7.90002" r="7.40582" fill="#121400" />
                         <path
@@ -44,34 +44,44 @@
                         <rect x="7.70003" y="6.70047" width="1.69649" height="1.69649"
                             transform="rotate(45 7.70003 6.70047)" fill="#ECCA44" />
                     </svg>
-                    <p class="font-sans font-semibold text-2xl">333</p>
+                    <p id="credit-amount" class="font-sans font-semibold text-2xl"></p>
                 </div>
                 <button
                     class="w-8 h-8 bg-purpleBrand rounded-full text-white text-lg hover:bg-yellowBrand hover:text-blackBrand transition-colors duration-200">+</button>
                 <div class="hidden md:block">
-                    <div class="hidden">
-                        <img src="./src/assets/profile.jpg" alt="Profile Image">
-                        <p class="font-sans underline-offset-2 underline cursor-pointer">Log out</p>
+                    <div id="desktop-logout" class="hidden gap-3 items-center">
+                        <img id="desktop-avatar" class="w-8 h-8 rounded-full object-cover cursor-pointer"
+                            src="./src/assets/profile.jpg" alt="Profile Image">
+                        <p id="desktop-logout-button" class="font-sans underline-offset-2 underline cursor-pointer">Log
+                            out</p>
                     </div>
-                    <div>
+                    <div id="desktop-login">
                         <a href="/login/" class="font-sans underline-offset-2 underline cursor-pointer">Sign in /
                             Register</a>
                     </div>
                 </div>
                 <div class="relative h-[22px] md:hidden">
-                    <button><svg xmlns="http://www.w3.org/2000/svg" width="32" height="22" viewBox="0 0 32 22"
-                            fill="none">
+                    <button id="dropdown-button"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="22"
+                            viewBox="0 0 32 22" fill="none">
                             <path d="M1 0.999996L31 0.999999" stroke="#ECCA44" stroke-width="2"
                                 stroke-linecap="round" />
                             <path d="M21 21L31 21" stroke="#ECCA44" stroke-width="2" stroke-linecap="round" />
                             <path d="M11 11L31 11" stroke="#ECCA44" stroke-width="2" stroke-linecap="round" />
                         </svg></button>
-                    <div class="hidden absolute top-14 right-0 bg-white rounded-[20px] rounded-tr-none shadow-lg p-4">
+                    <div id="dropdown-menu" class=" absolute top-14 right-0 bg-white rounded-[20px] rounded-tr-none shadow-lg p-4
+              transition-all duration-200 ease-out transform origin-top-right opacity-0 scale-y-0 pointer-events-none">
                         <ul class="flex flex-col gap-2 w-40">
                             <li><a class="block p-2 w-full" href="/auctions/">All auctions</a></li>
                             <li><a class="block p-2 w-full" href="#">About us</a></li>
                             <li><a class="block p-2 w-full" href="#">Contact</a></li>
-                            <li><a class="block p-2 w-full" href="/login/">Sign in / Register</a></li>
+                            <li id="mobile-logout" class="hidden gap-3 items-center"><img id="mobile-avatar"
+                                    src="/mockup.jpg" class="w-8 h-8 rounded-full object-cover cursor-pointer"
+                                    alt="Profile Image">
+                                <p id="mobile-logout-button"
+                                    class="font-sans underline-offset-2 underline cursor-pointer py-2 w-28">Log
+                                    out</p>
+                            </li>
+                            <li id="mobile-login"><a class="block p-2 w-full" href="/login/">Sign in / Register</a></li>
                         </ul>
                     </div>
                 </div>

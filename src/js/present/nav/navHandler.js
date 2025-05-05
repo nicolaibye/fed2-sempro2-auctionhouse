@@ -1,7 +1,8 @@
 import { toggleDropdown } from "/src/js/present/nav/toggleDropdown.js";
 import { getFromSessionStorage } from "/src/js/helpers/getFromSessionStorage.js";
+import { fetchCreditAmount } from "/src/js/data/profile/fetchCreditAmount.js";
 
-export function navHandler() {
+export async function navHandler() {
   toggleDropdown();
 
   if (sessionStorage.getItem("token")) {
@@ -57,5 +58,22 @@ export function navHandler() {
       sessionStorage.clear();
       window.location.href = "/";
     });
+
+    // credit amount
+    const creditAmount = document.getElementById("credit-amount");
+    try {
+     const credit = await fetchCreditAmount(username);
+      if (credit) {
+        creditAmount.innerText = credit;
+      } else {
+        creditAmount.innerText = "0";
+      }
+    }
+    catch (error) {
+      console.error("Error fetching credit amount:", error);
+    }
+  } else {
+    const creditAmountContainer = document.getElementById("credit-amount-container");
+    creditAmountContainer.classList.add("hidden");
   }
 }

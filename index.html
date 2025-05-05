@@ -36,7 +36,7 @@
         </ul>
       </div>
       <div class="flex items-center gap-5">
-        <div class="flex items-center gap-1">
+        <div id="credit-amount-container" class="flex items-center gap-1">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="none">
             <circle cx="7.75113" cy="7.90002" r="7.40582" fill="#121400" />
             <path
@@ -45,7 +45,7 @@
             <rect x="7.70003" y="6.70047" width="1.69649" height="1.69649" transform="rotate(45 7.70003 6.70047)"
               fill="#ECCA44" />
           </svg>
-          <p class="font-sans font-semibold text-2xl">333</p>
+          <p id="credit-amount" class="font-sans font-semibold text-2xl"></p>
         </div>
         <button
           class="w-8 h-8 bg-purpleBrand rounded-full text-white text-lg hover:bg-yellowBrand hover:text-blackBrand transition-colors duration-200">+</button>
@@ -53,10 +53,12 @@
           <div id="desktop-logout" class="hidden gap-3 items-center">
             <img id="desktop-avatar" class="w-8 h-8 rounded-full object-cover cursor-pointer"
               src="./src/assets/profile.jpg" alt="Profile Image">
-            <p id="desktop-logout-button" class="font-sans underline-offset-2 underline cursor-pointer">Log out</p>
+            <p id="desktop-logout-button" class="font-sans underline-offset-2 underline cursor-pointer">Log
+              out</p>
           </div>
           <div id="desktop-login">
-            <a href="/login/" class="font-sans underline-offset-2 underline cursor-pointer">Sign in / Register</a>
+            <a href="/login/" class="font-sans underline-offset-2 underline cursor-pointer">Sign in /
+              Register</a>
           </div>
         </div>
         <div class="relative h-[22px] md:hidden">
