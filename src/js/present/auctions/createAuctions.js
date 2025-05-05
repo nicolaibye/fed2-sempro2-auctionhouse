@@ -1,5 +1,4 @@
 import { createAuctionCard } from "/src/js/present/auctions/createAuctionCard.js";
-import { displayMessage } from "/src/js/present/common/displayMessage.js";
 
 export function createAuctions(container, data) {
   let auctionsContainer = container;
@@ -7,12 +6,11 @@ export function createAuctions(container, data) {
     auctionsContainer = document.querySelector(container);
   }
 
-  if (!data || data === null || data === undefined || data.length === 0) {
-    displayMessage(
-      auctionsContainer,
-      "warning",
-      "There are currently no auctions available.",
-    );
+  if (data.length === 0) {
+    const message = document.querySelector("#message");
+    message.classList.add("message");
+    message.classList.add("warning");
+    message.textContent = "There are currently no auctions available.";
     return;
   }
 
