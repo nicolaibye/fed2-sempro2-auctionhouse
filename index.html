@@ -47,8 +47,8 @@
           </svg>
           <p id="credit-amount" class="font-sans font-semibold text-2xl"></p>
         </div>
-        <button
-          class="w-8 h-8 bg-purpleBrand rounded-full text-white text-lg hover:bg-yellowBrand hover:text-blackBrand transition-colors duration-200">+</button>
+        <button id="create-listing-button"
+          class="hidden w-8 h-8 bg-purpleBrand rounded-full text-white text-lg hover:bg-yellowBrand hover:text-blackBrand transition-colors duration-200">+</button>
         <div class="hidden md:block">
           <div id="desktop-logout" class="hidden gap-3 items-center">
             <img id="desktop-avatar" class="w-8 h-8 rounded-full object-cover cursor-pointer"
@@ -105,59 +105,71 @@
       <h1 class="text-center font-sans font-semibold uppercase tracking-wider text-3xl">Category</h1>
       <div>
         <ul class="flex flex-wrap gap-10 justify-center m-5">
-          <li class="cursor-pointer">
-            <div
-              class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden md:hover:scale-105 transition-transform duration-200">
-              <img src="/mockup.jpg" class="w-full h-full object-cover" alt="Category Art Image">
-              <p
-                class="absolute bottom-0 left-0 bg-lightYellowBrand w-full text-center p-2 rounded-full font-sans font-medium">
-                Art</p>
-            </div>
+          <li>
+            <a href="/auctions/?category=art">
+              <div
+                class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden md:hover:scale-105 transition-transform duration-200">
+                <img src="/mockup.jpg" class="w-full h-full object-cover" alt="Category Art Image">
+                <p
+                  class="absolute bottom-0 left-0 bg-lightYellowBrand w-full text-center p-2 rounded-full font-sans font-medium">
+                  Art</p>
+              </div>
+            </a>
           </li>
-          <li class="cursor-pointer">
-            <div
-              class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden md:hover:scale-105 transition-transform duration-200">
-              <img src="/mockup.jpg" class="w-full h-full object-cover" alt="Category Art Image">
-              <p
-                class="absolute bottom-0 left-0 bg-lightYellowBrand w-full text-center p-2 rounded-full font-sans font-medium">
-                Memes</p>
-            </div>
+          <li>
+            <a href="/auctions/?category=memes">
+              <div
+                class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden md:hover:scale-105 transition-transform duration-200">
+                <img src="/mockup.jpg" class="w-full h-full object-cover" alt="Category Art Image">
+                <p
+                  class="absolute bottom-0 left-0 bg-lightYellowBrand w-full text-center p-2 rounded-full font-sans font-medium">
+                  Memes</p>
+              </div>
+            </a>
           </li>
-          <li class="cursor-pointer">
-            <div
-              class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden md:hover:scale-105 transition-transform duration-200">
-              <img src="/mockup.jpg" class="w-full h-full object-cover" alt="Category Art Image">
-              <p
-                class="absolute bottom-0 left-0 bg-lightYellowBrand w-full text-center p-2 rounded-full font-sans font-medium">
-                Animals</p>
-            </div>
+          <li>
+            <a href="/auctions/?category=animals">
+              <div
+                class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden md:hover:scale-105 transition-transform duration-200">
+                <img src="/mockup.jpg" class="w-full h-full object-cover" alt="Category Art Image">
+                <p
+                  class="absolute bottom-0 left-0 bg-lightYellowBrand w-full text-center p-2 rounded-full font-sans font-medium">
+                  Animals</p>
+              </div>
+            </a>
           </li>
-          <li class="cursor-pointer">
-            <div
-              class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden md:hover:scale-105 transition-transform duration-200">
-              <img src="/mockup.jpg" class="w-full h-full object-cover" alt="Category Art Image">
-              <p
-                class="absolute bottom-0 left-0 bg-lightYellowBrand w-full text-center p-2 rounded-full font-sans font-medium">
-                GIFs</p>
-            </div>
+          <li>
+            <a href="/auctions/?category=gif">
+              <div
+                class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden md:hover:scale-105 transition-transform duration-200">
+                <img src="/mockup.jpg" class="w-full h-full object-cover" alt="Category Art Image">
+                <p
+                  class="absolute bottom-0 left-0 bg-lightYellowBrand w-full text-center p-2 rounded-full font-sans font-medium">
+                  GIFs</p>
+              </div>
+            </a>
           </li>
-          <li class="cursor-pointer">
-            <div
-              class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden md:hover:scale-105 transition-transform duration-200">
-              <img src="/mockup.jpg" class="w-full h-full object-cover" alt="Category Art Image">
-              <p
-                class="absolute bottom-0 left-0 bg-lightYellowBrand w-full text-center p-2 rounded-full font-sans font-medium">
-                Nature</p>
-            </div>
+          <li>
+            <a href="/auctions/?category=nature">
+              <div
+                class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden md:hover:scale-105 transition-transform duration-200">
+                <img src="/mockup.jpg" class="w-full h-full object-cover" alt="Category Art Image">
+                <p
+                  class="absolute bottom-0 left-0 bg-lightYellowBrand w-full text-center p-2 rounded-full font-sans font-medium">
+                  Nature</p>
+              </div>
+            </a>
           </li>
-          <li class="cursor-pointer">
-            <div
-              class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden md:hover:scale-105 transition-transform duration-200">
-              <img src="/mockup.jpg" class="w-full h-full object-cover" alt="Category Art Image">
-              <p
-                class="absolute bottom-0 left-0 bg-lightYellowBrand w-full text-center p-2 rounded-full font-sans font-medium">
-                Other</p>
-            </div>
+          <li>
+            <a href="/auctions/?category=other">
+              <div
+                class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden md:hover:scale-105 transition-transform duration-200">
+                <img src="/mockup.jpg" class="w-full h-full object-cover" alt="Category Art Image">
+                <p
+                  class="absolute bottom-0 left-0 bg-lightYellowBrand w-full text-center p-2 rounded-full font-sans font-medium">
+                  Other</p>
+              </div>
+            </a>
           </li>
         </ul>
       </div>

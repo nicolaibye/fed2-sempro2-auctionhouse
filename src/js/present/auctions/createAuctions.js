@@ -11,6 +11,7 @@ export function createAuctions(container, data) {
     message.classList.add("message");
     message.classList.add("warning");
     message.textContent = "There are currently no auctions available.";
+    auctionsContainer.innerHTML = "";
     return;
   }
 

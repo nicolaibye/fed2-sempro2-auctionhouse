@@ -9,7 +9,7 @@ export function updateProfileOverlay() {
     `<div id="overlay-container"
         class="absolute top-0 left-0 w-full h-full flex justify-center items-center z-50">
         <div id="overlay-content" class="flex flex-col gap-5 m-5 items-center bg-yellowBrand rounded-[20px] p-5 z-[51]">
-            <article id="overlay-message">
+            <article id="overlay-message" class="hidden">
             </article>
             <img id="overlay-image" class="w-40 h-40 rounded-full object-cover" src="/mockup.jpg" alt="">
             <form action="" class="flex flex-col gap-5 w-full" id="overlay-form">

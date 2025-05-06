@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../../src/style.css" />
+    <script type="module" src="/src/main.js"></script>
     <title>Auction House | Women with crow</title>
 </head>
 
@@ -46,8 +47,8 @@
                     </svg>
                     <p id="credit-amount" class="font-sans font-semibold text-2xl"></p>
                 </div>
-                <button
-                    class="w-8 h-8 bg-purpleBrand rounded-full text-white text-lg hover:bg-yellowBrand hover:text-blackBrand transition-colors duration-200">+</button>
+                <button id="create-listing-button"
+                    class="hidden w-8 h-8 bg-purpleBrand rounded-full text-white text-lg hover:bg-yellowBrand hover:text-blackBrand transition-colors duration-200">+</button>
                 <div class="hidden md:block">
                     <div id="desktop-logout" class="hidden gap-3 items-center">
                         <img id="desktop-avatar" class="w-8 h-8 rounded-full object-cover cursor-pointer"
