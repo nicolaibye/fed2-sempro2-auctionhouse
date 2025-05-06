@@ -1,6 +1,7 @@
 import { toggleDropdown } from "/src/js/present/nav/toggleDropdown.js";
 import { getFromSessionStorage } from "/src/js/helpers/getFromSessionStorage.js";
 import { fetchCreditAmount } from "/src/js/data/profile/fetchCreditAmount.js";
+import { createAuctionOverlay } from "/src/js/present/auctions/createAuctionOverlay.js";
 
 export async function navHandler() {
   toggleDropdown();
@@ -8,6 +9,13 @@ export async function navHandler() {
   if (sessionStorage.getItem("token")) {
     const avatar = getFromSessionStorage("avatar");
     const username = getFromSessionStorage("username");
+    const createButton = document.getElementById("create-listing-button");
+    createButton.classList.remove("hidden");
+
+    // create listing button
+    createButton.addEventListener("click", () => {
+      createAuctionOverlay();
+    })
 
     // mobile
     const mobileLogin = document.getElementById("mobile-login");

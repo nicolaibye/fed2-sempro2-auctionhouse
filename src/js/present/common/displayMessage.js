@@ -4,6 +4,7 @@ export function displayMessage(container, type, message) {
     messageContainer = document.querySelector(container);
   }
 
+  messageContainer.classList.remove("hidden");
   messageContainer.innerHTML = `<p class="message ${type}">${message}</p>`;
 
   setTimeout(() => {
