@@ -6,13 +6,11 @@ export async function auctionHandler(containerId, amountToShow) {
   try {
     const container = document.getElementById(containerId);
     const auctions = await fetchAuctions();
-    console.log(auctions);
     const currentAuctions = auctions.filter((auction) => {
       const currentDate = new Date();
       const auctionEndDate = new Date(auction.endsAt);
       return auctionEndDate > currentDate;
     });
-    console.log(currentAuctions);
     if (amountToShow) {
       currentAuctions.sort((a, b) => new Date(a.endsAt) - new Date(b.endsAt));
       currentAuctions.splice(amountToShow);

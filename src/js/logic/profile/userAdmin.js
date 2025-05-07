@@ -9,6 +9,8 @@ export function userAdmin() {
   editBioButton.classList.add("btn", "w-32");
   bioButtons.append(editBioButton);
   editBioButton.addEventListener("click", () => {
+    const body = document.querySelector("body");
+    body.classList.add("overflow-hidden");
     updateProfileOverlay();
   });
 }

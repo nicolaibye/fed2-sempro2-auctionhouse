@@ -15,6 +15,8 @@ export async function navHandler() {
     // create listing button
     createButton.addEventListener("click", () => {
       createAuctionOverlay();
+      const body = document.querySelector("body");
+      body.classList.add("overflow-hidden");
     })
 
     // mobile
