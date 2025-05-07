@@ -1,4 +1,5 @@
 import { auctionHandler } from "./js/logic/auctions/auctionHandler";
+import { auctionByIdHandler } from "./js/logic/auctions/auctionByIdHandler";
 import { loginHandler } from "./js/logic/profile/loginHandler";
 import { profileHandler } from "./js/logic/profile/profileHandler";
 import { registerHandler } from "./js/logic/profile/registerHandler";
@@ -22,6 +23,7 @@ function router() {
       break;
     case "/auctions/item/":
     case "/auctions/item/index.html":
+      auctionByIdHandler();
       break;
     case "/login/":
     case "/login/index.html":

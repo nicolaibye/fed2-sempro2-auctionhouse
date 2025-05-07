@@ -5,6 +5,7 @@ import { getFromSessionStorage } from "/src/js/helpers/getFromSessionStorage.js"
 import { fetchProfileAuctions } from "/src/js/data/fetchProfileAuctions.js";
 import { createAuctions } from "/src/js/present/auctions/createAuctions.js";
 import { userAdmin } from "/src/js/logic/profile/userAdmin.js";
+import { fetchAuctionById } from "/src/js/data/fetchAuctionById.js";
 
 export async function profileHandler() {
   const queryString = window.location.search;
@@ -23,8 +24,12 @@ export async function profileHandler() {
 
   try {
     const auctions = await fetchProfileAuctions(username);
+    const auctionsData = auctions.data;
+    const detailedAuctions = await Promise.all(
+      auctionsData.map((auction) => fetchAuctionById(auction.id)),
+    );
     if (auctions) {
-      createAuctions("#auctionsProfile", auctions.data);
+      createAuctions("#auctionsProfile", detailedAuctions);
     }
   } catch (error) {
     console.error("Error fetching profile auctions:", error);
