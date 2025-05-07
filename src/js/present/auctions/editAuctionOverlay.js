@@ -80,7 +80,6 @@ export async function editAuctionOverlay(auction) {
   const overlayBackground = document.getElementById("overlay-background");
   const overlayForm = document.getElementById("overlay-form");
   const deleteButton = document.getElementById("delete-button");
-  const updateButton = document.getElementById("update-button");
   const categoryButton = document.getElementById("category-button");
   const categoryContainer = document.getElementById("category-container");
 

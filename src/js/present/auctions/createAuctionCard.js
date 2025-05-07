@@ -117,7 +117,7 @@ export function createAuctionCard(auction) {
   auctionButton.className = "btn";
   auctionButton.textContent = "View";
   auctionButton.onclick = () => {
-    window.location.href = `/auctions/item/${id}`;
+    window.location.href = `/auctions/item/?id=${id}`;
   };
 
   const queryString = window.location.search;
