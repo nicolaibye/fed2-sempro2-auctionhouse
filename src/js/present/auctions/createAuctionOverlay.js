@@ -10,8 +10,8 @@ export function createAuctionOverlay() {
     main.insertAdjacentHTML(
       "beforeend",
       `    <div id="overlay-auction-container"
-        class="absolute top-0 left-0 w-full h-full flex justify-center items-center z-50">
-        <div id="overlay-content" class="flex flex-col gap-5 m-5 items-center bg-yellowBrand rounded-[20px] p-5 z-[51]">
+        class="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50">
+        <div id="overlay-content" class="flex flex-col gap-3 items-center bg-yellowBrand rounded-[20px] p-5 z-[51] w-[90%] max-w-xl max-h-[90vh] overflow-y-auto">
             <article id="overlay-message" class="hidden">
             </article>
             <img id="overlay-image" class="w-full h-40 rounded-[20px] object-contain bg-lightPurpleBrand"
@@ -19,13 +19,13 @@ export function createAuctionOverlay() {
             <form action="" class="flex flex-col gap-3 w-full mb-0" id="overlay-auction-form">
                 <input class="bg-lightYellowBrand rounded-full p-2 px-4 w-full placeholder:text-blackBrand" type="text"
                     name="title" id="title" placeholder="Title" required>
-                <div class="flex justify-between gap-2">
-                    <span
-                        class="grow cursor-pointer bg-lightYellowBrand rounded-full p-2 px-4 text-center hover:bg-purpleBrand hover:text-white transition-colors duration-200"
-                        id="category-button">Category</span>
+                <div class="flex flex-col sm:flex-row justify-between gap-2">
                     <input type="date"
                         class="bg-lightYellowBrand rounded-full p-2 px-4 grow-[2] placeholder:text-blackBrand"
                         name="date" id="date" placeholder="Date" required>
+                    <span
+                        class="grow cursor-pointer bg-lightYellowBrand rounded-full p-2 px-4 sm:text-center hover:bg-purpleBrand hover:text-white transition-colors duration-200"
+                        id="category-button">Category</span>
                 </div>
                 <div class="hidden flex-wrap gap-2 justify-center" id="category-container">
                     <div>
@@ -58,7 +58,6 @@ export function createAuctionOverlay() {
                         <label for="tag-6"
                             class="cursor-pointer py-1 px-2 bg-lightYellowBrand rounded-full hover:bg-purpleBrand hover:text-white transition-colors duration-200 peer-checked:bg-purpleBrand peer-checked:text-white">Other</label>
                     </div>
-
                 </div>
                 <textarea class="bg-lightYellowBrand rounded-[20px] p-2 px-4 w-full placeholder:text-blackBrand"
                     name="description" id="description" cols="30" rows="5" placeholder="Description"></textarea>
@@ -99,9 +98,13 @@ export function createAuctionOverlay() {
     overlayForm.addEventListener("submit", submitAuctionForm);
 
     cancelButton.addEventListener("click", () => {
+      const body = document.querySelector("body");
+      body.classList.remove("overflow-hidden");
       overlayAuctionContainer.remove();
     });
     overlayBackground.addEventListener("click", () => {
+      const body = document.querySelector("body");
+      body.classList.remove("overflow-hidden");
       overlayAuctionContainer.remove();
     });
   }

@@ -1,6 +1,8 @@
 import { liveCountdown } from "../../helpers/liveCountdown";
 import { liveBidsCount } from "../../helpers/liveBidsCount";
 import { formatedTitle } from "../../helpers/formatedTitle";
+import { getFromSessionStorage } from "/src/js/helpers/getFromSessionStorage.js";
+import { editAuctionOverlay } from "/src/js/present/auctions/editAuctionOverlay.js";
 
 export function createAuctionCard(auction) {
   const { id, title, media, endsAt, bids } = auction;
@@ -117,6 +119,20 @@ export function createAuctionCard(auction) {
   auctionButton.onclick = () => {
     window.location.href = `/auctions/item/${id}`;
   };
+
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const username = urlParams.get("username");
+  const usernameStorage = getFromSessionStorage("username");
+
+  if (username && username === usernameStorage) {
+    auctionButton.textContent = "Edit";
+    auctionButton.onclick = () => {
+      const body = document.querySelector("body");
+      body.classList.add("overflow-hidden");
+      editAuctionOverlay(auction);
+    };
+  }
 
   auctionInfoContainer.append(auctionButton);
   auctionCard.append(timeContainer);

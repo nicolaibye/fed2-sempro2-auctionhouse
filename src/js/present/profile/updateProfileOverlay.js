@@ -7,8 +7,8 @@ export function updateProfileOverlay() {
   main.insertAdjacentHTML(
     "beforeend",
     `<div id="overlay-container"
-        class="absolute top-0 left-0 w-full h-full flex justify-center items-center z-50">
-        <div id="overlay-content" class="flex flex-col gap-5 m-5 items-center bg-yellowBrand rounded-[20px] p-5 z-[51]">
+        class="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50">
+        <div id="overlay-content" class="flex flex-col gap-5 m-5 items-center bg-yellowBrand rounded-[20px] p-5 z-[51] w-[90%] max-w-xl max-h-[90vh] overflow-y-auto">
             <article id="overlay-message" class="hidden">
             </article>
             <img id="overlay-image" class="w-40 h-40 rounded-full object-cover" src="/mockup.jpg" alt="">
@@ -35,9 +35,13 @@ export function updateProfileOverlay() {
 
   overlayForm.addEventListener("submit", submitProfileForm);
   cancelButton.addEventListener("click", () => {
+    const body = document.querySelector("body");
+    body.classList.remove("overflow-hidden");
     overlayContainer.remove();
   });
   overlayBackground.addEventListener("click", () => {
+    const body = document.querySelector("body");
+    body.classList.remove("overflow-hidden");
     overlayContainer.remove();
   });
 }

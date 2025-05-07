@@ -15,6 +15,7 @@ module.exports = {
       greyBrand: "#8D8E80",
       blackBrand: "#121400",
       white: "#FFFFFF",
+      errorDark: "#772640",
     },
     screens: {
       xs: "330px",
