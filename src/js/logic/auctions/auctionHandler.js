@@ -6,17 +6,23 @@ export async function auctionHandler(containerId, amountToShow) {
   try {
     const container = document.getElementById(containerId);
     const auctions = await fetchAuctions();
-    const currentAuctions = auctions.filter((auction) => {
-      const currentDate = new Date();
-      const auctionEndDate = new Date(auction.endsAt);
-      return auctionEndDate > currentDate;
-    });
+    const sortedAuctions = auctions.sort(
+      (a, b) => new Date(a.endsAt) - new Date(b.endsAt),
+    );
     if (amountToShow) {
-      currentAuctions.sort((a, b) => new Date(a.endsAt) - new Date(b.endsAt));
-      currentAuctions.splice(amountToShow);
+      sortedAuctions.splice(amountToShow);
     }
 
-    createAuctions(container, currentAuctions);
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get("category");
+    if (category) {
+      const filteredAuctions = sortedAuctions.filter((auction) =>
+        auction.tags.some((tag) => tag.toLowerCase() === category.toLowerCase()),
+      );
+      createAuctions(container, filteredAuctions);
+      return;
+    }
+    createAuctions(container, auctions);
   } catch (error) {
     console.error(
       "There was a problem with the fetch operation:",

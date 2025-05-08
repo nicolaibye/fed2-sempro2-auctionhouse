@@ -94,7 +94,7 @@
             class="flex flex-col items-center justify-center gap-4 m-5 p-5 rounded-[20px] bg-yellowBrand md:max-w-[700px] md:mx-auto">
             <h1 class="text-3xl text-center font-sans font-semibold uppercase tracking-wider md:text-5xl">All auctions
             </h1>
-            <label for="search" class="flex items-center bg-lightYellowBrand rounded-full p-1 w-full max-w-[376px]">
+            <label for="search" class="flex items-center bg-lightYellowBrand rounded-full p-1 w-full max-w-[780px]">
                 <span class="block p-2 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16"
                         viewBox="0 0 17 16" fill="none">
                         <path
@@ -106,20 +106,48 @@
             </label>
         </div>
         <div class="flex flex-col items-center justify-center gap-4 m-5">
-            <button class="btn">Category</button>
-            <div class="hidden top-[52px] z-10">
-                <ul class="flex flex-wrap justify-center gap-4">
-                    <li><button class="catBtn activeBtn">Art</button></li>
-                    <li><button class="catBtn">Memes</button></li>
-                    <li><button class="catBtn">Animals</button></li>
-                    <li><button class="catBtn">GIF</button></li>
-                    <li><button class="catBtn">Nature</button></li>
-                    <li><button class="catBtn">Other</button></li>
-                </ul>
-            </div>
+            <form action="" id="filter-form" class="flex flex-col gap-3 mb-0">
+                <div class="flex flex-row justify-center gap-2">
+                    <span
+                        class="cursor-pointer bg-lightYellowBrand rounded-full p-2 px-4 sm:text-center hover:bg-purpleBrand hover:text-white transition-colors duration-200"
+                        id="category-filter-button">Category</span>
+                </div>
+                <div class="hidden flex-wrap gap-2 justify-center" id="category-filter-container">
+                    <div>
+                        <input type="radio" id="category-1" name="category" class="hidden peer" value="Art">
+                        <label for="category-1"
+                            class="cursor-pointer py-1 px-2 bg-lightYellowBrand rounded-full hover:bg-purpleBrand hover:text-white transition-colors duration-200 peer-checked:bg-purpleBrand peer-checked:text-white">Art</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="category-2" name="category" class="hidden peer" value="Memes">
+                        <label for="category-2"
+                            class="cursor-pointer py-1 px-2 bg-lightYellowBrand rounded-full hover:bg-purpleBrand hover:text-white transition-colors duration-200 peer-checked:bg-purpleBrand peer-checked:text-white">Memes</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="category-3" name="category" class="hidden peer" value="Animals">
+                        <label for="category-3"
+                            class="cursor-pointer py-1 px-2 bg-lightYellowBrand rounded-full hover:bg-purpleBrand hover:text-white transition-colors duration-200 peer-checked:bg-purpleBrand peer-checked:text-white">Animals</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="category-4" name="category" class="hidden peer" value="GIF">
+                        <label for="category-4"
+                            class="cursor-pointer py-1 px-2 bg-lightYellowBrand rounded-full hover:bg-purpleBrand hover:text-white transition-colors duration-200 peer-checked:bg-purpleBrand peer-checked:text-white">GIF</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="category-5" name="category" class="hidden peer" value="Nature">
+                        <label for="category-5"
+                            class="cursor-pointer py-1 px-2 bg-lightYellowBrand rounded-full hover:bg-purpleBrand hover:text-white transition-colors duration-200 peer-checked:bg-purpleBrand peer-checked:text-white">Nature</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="category-6" name="category" class="hidden peer" value="Other">
+                        <label for="category-6"
+                            class="cursor-pointer py-1 px-2 bg-lightYellowBrand rounded-full hover:bg-purpleBrand hover:text-white transition-colors duration-200 peer-checked:bg-purpleBrand peer-checked:text-white">Other</label>
+                    </div>
+                </div>
+            </form>
         </div>
         <section>
-            <div class="flex flex-col gap-5 m-5 items-center">
+            <div class="flex flex-col m-5 items-center">
                 <article id="message">
                 </article>
                 <ul id="auctionsAll" class="flex flex-wrap justify-center gap-3 md:gap-10">
