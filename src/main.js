@@ -4,6 +4,7 @@ import { loginHandler } from "./js/logic/profile/loginHandler";
 import { profileHandler } from "./js/logic/profile/profileHandler";
 import { registerHandler } from "./js/logic/profile/registerHandler";
 import { navHandler } from "./js/present/nav/navHandler";
+import { categoryHandler } from "./js/logic/auctions/categoryHandler";
 import "./style.css";
 
 
@@ -20,6 +21,7 @@ function router() {
     case "/auctions/":
     case "/auctions/index.html":
       auctionHandler("auctionsAll");
+      categoryHandler("filter-form", "category-filter-button");
       break;
     case "/auctions/item/":
     case "/auctions/item/index.html":
