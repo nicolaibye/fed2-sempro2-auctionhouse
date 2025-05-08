@@ -141,20 +141,23 @@
                         </svg>
                         <p class="font-semibold text-6xl" id="auction-bids-count">333</p>
                     </div>
-                    <p><span class="font-sans underline-offset-2 underline cursor-pointer" id="auction-bids">3 bids</span> | Ends in
+                    <p><span class="font-sans underline-offset-2 underline cursor-pointer" id="auction-bids">3
+                            bids</span> | Ends in
                         <span id="auction-ends-in">1h
                             2min 3s</span>
                     </p>
                     <label for="bid"
-                        class="relative outline outline-1 outline-greyBrand rounded-full p-4 px-5 flex items-center gap-2 md:bg-white">
-                        <input type="number" name="bid" id="bid" placeholder="Amount">
-                        <button class="btn absolute right-3">Place bid</button>
+                        class="relative outline outline-1 outline-blackBrand md:outline-lightYellowBrand rounded-full p-4 px-5 flex items-center gap-2 md:bg-lightYellowBrand ">
+                        <input type="number" name="bid" id="bid" placeholder="Amount"
+                            class="md:bg-lightYellowBrand placeholder:text-blackBrand outline-none">
+                        <button class="btn absolute right-3" id="place-bid-button">Place bid</button>
                     </label>
                 </div>
                 <hr class="mx-10 border-greyBrand">
                 <div class="flex flex-col m-10 mt-5 gap-5">
                     <p class="font-semibold text-2xl">Description</p>
-                    <p class="leading-snug" id="auction-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaem.
+                    <p class="leading-snug" id="auction-description">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Quisquam, quaem.
                         Lorem
                         ipsum dolor sit amet
                         consectetur adipisicing elit. Quisquam, quaem. Lorem ipsum dolor sit amet consectetur
@@ -267,8 +270,8 @@
             <a href="#"><img src="/AH_desktop_icon_white.svg" fill="#FFFFFF" alt="Auction House Logo"></a>
             <ul class="flex flex-col gap-2">
                 <li><a href="#">About us</a></li>
-                <li><a href="#">Sign in / Register</a></li>
-                <li><a href="#">All auctions</a></li>
+                <li><a href="/login/">Sign in / Register</a></li>
+                <li><a href="/auctions/">All auctions</a></li>
                 <li><a href="#">Help &amp; Contact</a></li>
             </ul>
             <div>

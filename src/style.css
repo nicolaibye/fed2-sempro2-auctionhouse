@@ -13,18 +13,17 @@
     color: #121400;
     font-family: work-sans, sans-serif;
   }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
 
 @layer components {
   .btn {
     @apply w-[90px] h-[32px] bg-purpleBrand text-white rounded-full outline outline-2 outline-purpleBrand -outline-offset-2 hover:bg-white hover:text-purpleBrand hover:font-medium transition-colors duration-200;
-  }
-  .catBtn {
-    @apply w-[90px] h-[32px] bg-white text-purpleBrand font-medium rounded-full outline outline-2 outline-purpleBrand -outline-offset-2 hover:bg-purpleBrand hover:text-white hover:font-normal transition-colors duration-200;
-  }
-
-  .activeBtn {
-    @apply bg-purpleBrand text-white font-normal;
   }
 
   /* .message {
