@@ -1,8 +1,13 @@
 import { loginApiCall } from "/src/js/data/profile/loginApiCall.js";
 import { displayMessage } from "/src/js/present/common/displayMessage.js";
+import { getFromSessionStorage } from "/src/js/helpers/getFromSessionStorage.js";
 
 export function loginHandler() {
   const form = document.getElementById("login");
+  const username = getFromSessionStorage("username");
+  if (username) {
+    window.location.href = "/";
+  }
 
   if (form) {
     form.addEventListener("submit", submitForm);
