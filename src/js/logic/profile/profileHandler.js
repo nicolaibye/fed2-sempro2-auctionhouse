@@ -6,6 +6,7 @@ import { fetchProfileAuctions } from "/src/js/data/fetchProfileAuctions.js";
 import { createAuctions } from "/src/js/present/auctions/createAuctions.js";
 import { userAdmin } from "/src/js/logic/profile/userAdmin.js";
 import { fetchAuctionById } from "/src/js/data/fetchAuctionById.js";
+import { searchAuctions } from "../auctions/searchAuctions";
 
 export async function profileHandler() {
   const queryString = window.location.search;
@@ -30,6 +31,7 @@ export async function profileHandler() {
     );
     if (auctions) {
       createAuctions("#auctionsProfile", detailedAuctions);
+      searchAuctions("#auctionsProfile", detailedAuctions);
     }
   } catch (error) {
     console.error("Error fetching profile auctions:", error);
