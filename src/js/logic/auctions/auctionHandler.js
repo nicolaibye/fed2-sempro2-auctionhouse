@@ -4,6 +4,7 @@ import { displayMessage } from "/src/js/present/common/displayMessage.js";
 import { searchAuctions } from "/src/js/logic/auctions/searchAuctions.js";
 import { searchQueryParams } from "/src/js/helpers/searchQueryParams.js";
 import { fillSearchForm } from "/src/js/helpers/fillSearchForm.js";
+import { filteredAuctionsByCategory } from "/src/js/data/filteredAuctionsByCategory.js";
 
 export async function auctionHandler(containerId, amountToShow) {
   try {
@@ -22,13 +23,19 @@ export async function auctionHandler(containerId, amountToShow) {
     const urlParams = new URLSearchParams(window.location.search);
     const category = urlParams.get("category");
     if (category) {
-      const filteredAuctions = sortedAuctions.filter((auction) =>
-        auction.tags.some(
-          (tag) => tag.toLowerCase() === category.toLowerCase(),
-        ),
-      );
-      createAuctions(container, filteredAuctions);
-      return;
+      try {
+        const filteredAuctions = await filteredAuctionsByCategory(category);
+        console.log(filteredAuctions);
+        createAuctions(container, filteredAuctions);
+        searchAuctions(container, auctions);
+        return;
+      } catch (error) {
+        console.error(
+          "There was a problem with the fetch operation:",
+          error.message,
+        );
+        displayMessage("#message", "error", error.message);
+      }
     }
 
     createAuctions(container, auctions);

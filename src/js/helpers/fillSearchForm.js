@@ -1,5 +1,3 @@
-import { searchAuctions } from "/src/js/logic/auctions/searchAuctions.js";
-
 export function fillSearchForm(container, auctions) {
   const urlParams = new URLSearchParams(window.location.search);
   const query = urlParams.get("q");

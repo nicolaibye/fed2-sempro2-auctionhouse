@@ -12,13 +12,21 @@ export function createAuctions(container, data) {
     message.classList.add("warning");
     message.textContent = "There are currently no auctions available.";
     auctionsContainer.innerHTML = "";
+    setTimeout(() => {
+      message.innerHTML = "";
+      message.classList.remove("warning");
+      message.classList.remove("message");
+    }, 3000);
     return;
+  } else {
+    message.innerHTML = "";
+    message.classList.remove("warning");
+    message.classList.remove("message");
+    auctionsContainer.innerHTML = "";
+
+    data.forEach((auction) => {
+      const auctionCard = createAuctionCard(auction);
+      auctionsContainer.append(auctionCard);
+    });
   }
-
-  auctionsContainer.innerHTML = "";
-
-  data.forEach((auction) => {
-    const auctionCard = createAuctionCard(auction);
-    auctionsContainer.append(auctionCard);
-  });
 }

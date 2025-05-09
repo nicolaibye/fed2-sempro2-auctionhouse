@@ -163,7 +163,7 @@ async function submitUpdateForm(event) {
   );
   tagInputs.forEach((input) => {
     if (input.checked) {
-      tags.push(input.value);
+      tags.push(input.value.toLowerCase());
     }
   });
   const data = {
@@ -173,7 +173,6 @@ async function submitUpdateForm(event) {
       : { description: "No description has been provided" }),
     ...(tags.length > 0 ? { tags } : {}),
   };
-  console.log(data);
 
   try {
     await updateAuctionApiCall(id, data);

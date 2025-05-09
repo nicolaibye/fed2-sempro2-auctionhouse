@@ -26,26 +26,36 @@
     @apply w-[90px] h-[32px] bg-purpleBrand text-white rounded-full outline outline-2 outline-purpleBrand -outline-offset-2 hover:bg-white hover:text-purpleBrand hover:font-medium transition-colors duration-200;
   }
 
-  /* .message {
-    @apply p-4 mb-6 border-2 border-peach text-dusk bg-white rounded-md text-center col-span-2;
+  .message {
+    @apply p-4 m-3 border-2 bg-white rounded-md text-center col-span-2;
   }
 
   .error {
-    @apply text-night border-red-600 bg-red-300;
+    @apply text-blackBrand border-red-600 bg-red-300;
   }
 
   .success {
-    @apply text-night border-green-700 bg-green-300;
+    @apply text-blackBrand border-green-700 bg-green-300;
   }
 
   .warning {
-    @apply text-night border-orange-500 bg-orange-300;
-  } */
+    @apply text-blackBrand border-orange-500 bg-orange-300;
+  }
 }
 
 @layer utilities {
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #ffe787;
+    border-radius: 10px;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar {
+    background-color: #dab41f;
+    width: 2px;
   }
 }
