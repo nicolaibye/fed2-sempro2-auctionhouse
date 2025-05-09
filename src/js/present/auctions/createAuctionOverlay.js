@@ -122,7 +122,7 @@ export function createAuctionOverlay() {
     );
     tagInputs.forEach((input) => {
       if (input.checked) {
-        tags.push(input.value);
+        tags.push(input.value.toLowerCase());
       }
     });
     const data = {

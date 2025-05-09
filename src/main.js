@@ -7,8 +7,6 @@ import { navHandler } from "./js/present/nav/navHandler";
 import { categoryHandler } from "./js/logic/auctions/categoryHandler";
 import "./style.css";
 
-
-
 navHandler();
 
 function router() {

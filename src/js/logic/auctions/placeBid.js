@@ -8,7 +8,6 @@ export function placeBid(id) {
   bidInput.addEventListener("input", () => {
     const bidValue = bidInput.value;
     bidButton.disabled = !bidValue;
-    console.log(bidValue);
   });
 
   bidButton.addEventListener("click", async () => {
@@ -21,7 +20,8 @@ export function placeBid(id) {
     try {
       await bidApiCall(id, bidNumber);
     } catch (error) {
-      console.log(error);
+      console.error("There was a problem with making a bid:", error.message);
+      displayMessage("#message", "error", error.message);
     }
   });
 }

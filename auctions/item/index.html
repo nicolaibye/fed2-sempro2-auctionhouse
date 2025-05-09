@@ -16,80 +16,77 @@
     <title>Auction House | Women with crow</title>
 </head>
 
-<body>
-    <header class="sticky top-5 z-50">
-        <nav
-            class="flex justify-between items-center m-5 outline outline-2 outline-greyBrand rounded-[20px] backdrop-blur-sm bg-white/50 p-4 md:py-3">
-            <a href="/"><img class="md:hidden" src="/AH_mobile_icon.svg" alt="Auction House Logo"><img
-                    class="hidden md:block" src="/AH_desktop_icon.svg" alt="Auction House Logo"></a>
-            <div class="hidden md:block">
-                <ul class="flex gap-3">
-                    <li class="flex"><a
-                            class="p-2 px-3 hover:bg-purpleBrand hover:text-white rounded-full transition-colors duration-200"
-                            href="/auctions/">All auctions</a></li>
-                    <li class="flex"><a
-                            class="p-2 px-3 hover:bg-purpleBrand hover:text-white rounded-full transition-colors duration-200"
-                            href="#">About us</a></li>
-                    <li class="flex"><a
-                            class="p-2 px-3 hover:bg-purpleBrand hover:text-white rounded-full transition-colors duration-200"
-                            href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="flex items-center gap-5">
-                <div id="credit-amount-container" class="flex items-center gap-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="none">
-                        <circle cx="7.75113" cy="7.90002" r="7.40582" fill="#121400" />
-                        <path
-                            d="M7.82936 12.5873C5.00471 12.5873 2.9772 10.6291 2.9772 7.89108C2.9772 5.15308 5.00471 3.21222 7.82936 3.21222C9.47562 3.21222 10.8446 3.88806 11.5724 5.17041L10.3074 5.98488C9.71823 5.08376 8.81712 4.66787 7.81203 4.66787C6.0098 4.66787 4.65813 5.93289 4.65813 7.89108C4.65813 9.88393 6.0098 11.1316 7.81203 11.1316C8.81712 11.1316 9.71823 10.7157 10.3074 9.81462L11.5724 10.6118C10.8446 11.8941 9.47562 12.5873 7.82936 12.5873Z"
-                            fill="#ECCA44" />
-                        <rect x="7.70003" y="6.70047" width="1.69649" height="1.69649"
-                            transform="rotate(45 7.70003 6.70047)" fill="#ECCA44" />
-                    </svg>
-                    <p id="credit-amount" class="font-sans font-semibold text-2xl"></p>
-                </div>
-                <button id="create-listing-button"
-                    class="hidden w-8 h-8 bg-purpleBrand rounded-full text-white text-lg hover:bg-yellowBrand hover:text-blackBrand transition-colors duration-200">+</button>
-                <div class="hidden md:block">
-                    <div id="desktop-logout" class="hidden gap-3 items-center">
-                        <img id="desktop-avatar" class="w-8 h-8 rounded-full object-cover cursor-pointer"
-                            src="./src/assets/profile.jpg" alt="Profile Image">
-                        <p id="desktop-logout-button" class="font-sans underline-offset-2 underline cursor-pointer">Log
-                            out</p>
-                    </div>
-                    <div id="desktop-login">
-                        <a href="/login/" class="font-sans underline-offset-2 underline cursor-pointer">Sign in /
-                            Register</a>
-                    </div>
-                </div>
-                <div class="relative h-[22px] md:hidden">
-                    <button id="dropdown-button"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="22"
-                            viewBox="0 0 32 22" fill="none">
-                            <path d="M1 0.999996L31 0.999999" stroke="#ECCA44" stroke-width="2"
-                                stroke-linecap="round" />
-                            <path d="M21 21L31 21" stroke="#ECCA44" stroke-width="2" stroke-linecap="round" />
-                            <path d="M11 11L31 11" stroke="#ECCA44" stroke-width="2" stroke-linecap="round" />
-                        </svg></button>
-                    <div id="dropdown-menu" class=" absolute top-14 right-0 bg-white rounded-[20px] rounded-tr-none shadow-lg p-4
-              transition-all duration-200 ease-out transform origin-top-right opacity-0 scale-y-0 pointer-events-none">
-                        <ul class="flex flex-col gap-2 w-40">
-                            <li><a class="block p-2 w-full" href="/auctions/">All auctions</a></li>
-                            <li><a class="block p-2 w-full" href="#">About us</a></li>
-                            <li><a class="block p-2 w-full" href="#">Contact</a></li>
-                            <li id="mobile-logout" class="hidden gap-3 items-center"><img id="mobile-avatar"
-                                    src="/mockup.jpg" class="w-8 h-8 rounded-full object-cover cursor-pointer"
-                                    alt="Profile Image">
-                                <p id="mobile-logout-button"
-                                    class="font-sans underline-offset-2 underline cursor-pointer py-2 w-28">Log
-                                    out</p>
-                            </li>
-                            <li id="mobile-login"><a class="block p-2 w-full" href="/login/">Sign in / Register</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main>
+<body class="min-h-screen flex flex-col">
+  <header class="sticky top-0 z-50">
+    <nav
+      class="flex justify-between items-center m-5 outline outline-2 outline-greyBrand rounded-[20px] backdrop-blur-sm bg-white/50 p-4 md:py-3">
+      <a href="/"><img class="md:hidden" src="/AH_mobile_icon.svg" alt="Auction House Logo"><img class="hidden md:block"
+          src="/AH_desktop_icon.svg" alt="Auction House Logo"></a>
+      <div class="hidden md:block">
+        <ul class="flex gap-3">
+          <li class="flex"><a
+              class="p-2 px-3 hover:bg-purpleBrand hover:text-white rounded-full transition-colors duration-200"
+              href="/auctions/">All auctions</a></li>
+          <li class="flex"><a
+              class="p-2 px-3 hover:bg-purpleBrand hover:text-white rounded-full transition-colors duration-200"
+              href="#">About us</a></li>
+          <li class="flex"><a
+              class="p-2 px-3 hover:bg-purpleBrand hover:text-white rounded-full transition-colors duration-200"
+              href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="flex items-center gap-5">
+        <div id="credit-amount-container" class="flex items-center gap-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="none">
+            <circle cx="7.75113" cy="7.90002" r="7.40582" fill="#121400" />
+            <path
+              d="M7.82936 12.5873C5.00471 12.5873 2.9772 10.6291 2.9772 7.89108C2.9772 5.15308 5.00471 3.21222 7.82936 3.21222C9.47562 3.21222 10.8446 3.88806 11.5724 5.17041L10.3074 5.98488C9.71823 5.08376 8.81712 4.66787 7.81203 4.66787C6.0098 4.66787 4.65813 5.93289 4.65813 7.89108C4.65813 9.88393 6.0098 11.1316 7.81203 11.1316C8.81712 11.1316 9.71823 10.7157 10.3074 9.81462L11.5724 10.6118C10.8446 11.8941 9.47562 12.5873 7.82936 12.5873Z"
+              fill="#ECCA44" />
+            <rect x="7.70003" y="6.70047" width="1.69649" height="1.69649" transform="rotate(45 7.70003 6.70047)"
+              fill="#ECCA44" />
+          </svg>
+          <p id="credit-amount" class="font-sans font-semibold text-2xl"></p>
+        </div>
+        <button id="create-listing-button"
+          class="hidden w-8 h-8 bg-purpleBrand rounded-full text-white text-lg hover:bg-yellowBrand hover:text-blackBrand transition-colors duration-200">+</button>
+        <div class="hidden md:block">
+          <div id="desktop-logout" class="hidden gap-3 items-center">
+            <img id="desktop-avatar" class="w-8 h-8 rounded-full object-cover cursor-pointer"
+              src="./src/assets/profile.jpg" alt="Profile Image">
+            <p id="desktop-logout-button" class="font-sans underline-offset-2 underline cursor-pointer">Log
+              out</p>
+          </div>
+          <div id="desktop-login">
+            <a href="/login/" class="font-sans underline-offset-2 underline cursor-pointer">Sign in /
+              Register</a>
+          </div>
+        </div>
+        <div class="relative h-[22px] md:hidden">
+          <button id="dropdown-button"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="22"
+              viewBox="0 0 32 22" fill="none">
+              <path d="M1 0.999996L31 0.999999" stroke="#ECCA44" stroke-width="2" stroke-linecap="round" />
+              <path d="M21 21L31 21" stroke="#ECCA44" stroke-width="2" stroke-linecap="round" />
+              <path d="M11 11L31 11" stroke="#ECCA44" stroke-width="2" stroke-linecap="round" />
+            </svg></button>
+          <div id="dropdown-menu" class=" absolute top-14 right-0 bg-white rounded-[20px] rounded-tr-none shadow-lg p-4
+          transition-all duration-200 ease-out transform origin-top-right opacity-0 scale-y-0 pointer-events-none">
+            <ul class="flex flex-col gap-2 w-40">
+              <li><a class="block p-2 w-full" href="/auctions/">All auctions</a></li>
+              <li><a class="block p-2 w-full" href="#">About us</a></li>
+              <li><a class="block p-2 w-full" href="#">Contact</a></li>
+              <li id="mobile-logout" class="hidden gap-3 items-center"><img id="mobile-avatar" src="/mockup.jpg"
+                  class="w-8 h-8 rounded-full object-cover cursor-pointer" alt="Profile Image">
+                <p id="mobile-logout-button" class="font-sans underline-offset-2 underline cursor-pointer py-2 w-28">Log
+                  out</p>
+              </li>
+              <li id="mobile-login"><a class="block p-2 w-full" href="/login/">Sign in / Register</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+    <main class="flex-grow">
         <article id="message">
         </article>
         <p class="text-sm mx-10" id="auction-path"></p>
