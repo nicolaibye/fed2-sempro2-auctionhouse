@@ -1,8 +1,9 @@
 import { displayMessage } from "/src/js/present/common/displayMessage.js";
 import { getFromSessionStorage } from "/src/js/helpers/getFromSessionStorage.js";
 import { updateProfileApiCall } from "/src/js/data/profile/updateProfileApiCall.js";
+import { profileHandler } from "../../logic/profile/profileHandler";
 
-export function updateProfileOverlay() {
+export function updateProfileOverlay(profile) {
   const main = document.querySelector("main");
   main.insertAdjacentHTML(
     "beforeend",
@@ -11,10 +12,12 @@ export function updateProfileOverlay() {
         <div id="overlay-content" class="flex flex-col gap-5 m-5 items-center bg-yellowBrand rounded-[20px] p-5 z-[51] w-[90%] max-w-xl max-h-[90vh] overflow-y-auto">
             <article id="overlay-message" class="hidden">
             </article>
-            <img id="overlay-image" class="w-40 h-40 rounded-full object-cover" src="/mockup.jpg" alt="">
+            <img id="overlay-image" class="w-40 h-40 rounded-full object-cover" src="${profile.data.avatar.url}" alt="">
             <form action="" class="flex flex-col gap-5 w-full" id="overlay-form">
                 <input class="bg-lightYellowBrand rounded-full p-2 px-4 w-full placeholder:text-blackBrand" type="text"
                     name="avatar" id="avatar" placeholder="Avatar URL" title="Please enter a valid URL starting with http:// or https://" pattern="https?://.*">
+                <input class="bg-lightYellowBrand rounded-full p-2 px-4 w-full placeholder:text-blackBrand" type="text"
+                    name="banner" id="banner" placeholder="Banner URL" title="Please enter a valid URL starting with http:// or https://" pattern="https?://.*">
                 <textarea class="bg-lightYellowBrand rounded-[20px] p-2 px-4 w-full placeholder:text-blackBrand"
                     name="bio" id="bio" cols="30" rows="10" placeholder="Bio"></textarea>
                 <div class="flex justify-between items-center">
@@ -52,6 +55,7 @@ async function submitProfileForm(event) {
   const username = getFromSessionStorage("username");
   const bio = formData.get("bio");
   const avatar = formData.get("avatar");
+  const banner = formData.get("banner");
   const data = {
     ...(bio && bio.trim() !== "" ? { bio: bio } : {}),
     ...(avatar && avatar.trim() !== ""
@@ -59,6 +63,14 @@ async function submitProfileForm(event) {
           avatar: {
             url: avatar,
             alt: `${username}'s profile picture`,
+          },
+        }
+      : {}),
+    ...(banner && banner.trim() !== ""
+      ? {
+          banner: {
+            url: banner,
+            alt: `${username}'s profile banner`,
           },
         }
       : {}),

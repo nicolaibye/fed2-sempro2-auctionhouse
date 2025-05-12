@@ -149,7 +149,7 @@ export async function populateRecommendedAuctions() {
     auctionArrow.append(auctionArrowPath);
     auctionArrow.append(auctionArrowPath2);
 
-    auctionBidContainer.append(auctionBidsIcon, auctionBidAmount);
+    auctionBidContainer.append(auctionBidAmount, auctionBidsIcon);
     auctionDetails.append(auctionTitle, auctionBidContainer);
     auctionInfo.append(auctionDetails, auctionArrow);
     auctionLink.append(auctionImage, auctionInfo);

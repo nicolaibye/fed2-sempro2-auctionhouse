@@ -25,7 +25,6 @@ export async function auctionHandler(containerId, amountToShow) {
     if (category) {
       try {
         const filteredAuctions = await filteredAuctionsByCategory(category);
-        console.log(filteredAuctions);
         createAuctions(container, filteredAuctions);
         searchAuctions(container, auctions);
         return;

@@ -1,10 +1,17 @@
 export function userProfileBio(profile) {
+  document.title = `Auction House | ${profile.data.name}`;
+
+  const profileBanner = document.getElementById("profile-banner-image");
+  profileBanner.src = profile.data.banner.url;
+  profileBanner.alt = `${profile.data.name}'s profile banner`;
+
   const profileBioContainer = document.getElementById("profile-bio-container");
   profileBioContainer.innerHTML = "";
 
   const profileImage = document.getElementById("profile-image");
   profileImage.src = profile.data.avatar.url;
   profileImage.alt = `${profile.data.name}'s profile picture`;
+  profileImage.classList.remove("animate-pulse");
 
   const profileUsername = document.createElement("p");
   profileUsername.classList.add("text-2xl");
