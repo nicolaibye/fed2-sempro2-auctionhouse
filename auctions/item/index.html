@@ -5,125 +5,120 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/AH_mobile_icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="The social media platform for dreams and chill vibes" />
+    <meta name="description"
+        content="Discover unique listings, bid history, and seller info for each auction item on Auction House." />
+    <meta name="language" content="en">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#ECCA44">
+    <meta name="robots" content="noindex">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="canonical" href="https://auctionhouse.netlify.app/auctions/">
     <link
         href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../../src/style.css" />
-    <script type="module" src="/src/main.js"></script>
-    <title>Auction House | Women with crow</title>
+    <link rel="stylesheet" href="/../src/style.css" />
+    <script type="module" src="/../src/main.js"></script>
+    <title>Auction House</title>
 </head>
 
 <body class="min-h-screen flex flex-col">
-  <header class="sticky top-0 z-50">
-    <nav
-      class="flex justify-between items-center m-5 outline outline-2 outline-greyBrand rounded-[20px] backdrop-blur-sm bg-white/50 p-4 md:py-3">
-      <a href="/"><img class="md:hidden" src="/AH_mobile_icon.svg" alt="Auction House Logo"><img class="hidden md:block"
-          src="/AH_desktop_icon.svg" alt="Auction House Logo"></a>
-      <div class="hidden md:block">
-        <ul class="flex gap-3">
-          <li class="flex"><a
-              class="p-2 px-3 hover:bg-purpleBrand hover:text-white rounded-full transition-colors duration-200"
-              href="/auctions/">All auctions</a></li>
-          <li class="flex"><a
-              class="p-2 px-3 hover:bg-purpleBrand hover:text-white rounded-full transition-colors duration-200"
-              href="#">About us</a></li>
-          <li class="flex"><a
-              class="p-2 px-3 hover:bg-purpleBrand hover:text-white rounded-full transition-colors duration-200"
-              href="#">Contact</a></li>
-        </ul>
-      </div>
-      <div class="flex items-center gap-5">
-        <div id="credit-amount-container" class="flex items-center gap-1">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="none">
-            <circle cx="7.75113" cy="7.90002" r="7.40582" fill="#121400" />
-            <path
-              d="M7.82936 12.5873C5.00471 12.5873 2.9772 10.6291 2.9772 7.89108C2.9772 5.15308 5.00471 3.21222 7.82936 3.21222C9.47562 3.21222 10.8446 3.88806 11.5724 5.17041L10.3074 5.98488C9.71823 5.08376 8.81712 4.66787 7.81203 4.66787C6.0098 4.66787 4.65813 5.93289 4.65813 7.89108C4.65813 9.88393 6.0098 11.1316 7.81203 11.1316C8.81712 11.1316 9.71823 10.7157 10.3074 9.81462L11.5724 10.6118C10.8446 11.8941 9.47562 12.5873 7.82936 12.5873Z"
-              fill="#ECCA44" />
-            <rect x="7.70003" y="6.70047" width="1.69649" height="1.69649" transform="rotate(45 7.70003 6.70047)"
-              fill="#ECCA44" />
-          </svg>
-          <p id="credit-amount" class="font-sans font-semibold text-2xl"></p>
-        </div>
-        <button id="create-listing-button"
-          class="hidden w-8 h-8 bg-purpleBrand rounded-full text-white text-lg hover:bg-yellowBrand hover:text-blackBrand transition-colors duration-200">+</button>
-        <div class="hidden md:block">
-          <div id="desktop-logout" class="hidden gap-3 items-center">
-            <img id="desktop-avatar" class="w-8 h-8 rounded-full object-cover cursor-pointer"
-              src="./src/assets/profile.jpg" alt="Profile Image">
-            <p id="desktop-logout-button" class="font-sans underline-offset-2 underline cursor-pointer">Log
-              out</p>
-          </div>
-          <div id="desktop-login">
-            <a href="/login/" class="font-sans underline-offset-2 underline cursor-pointer">Sign in /
-              Register</a>
-          </div>
-        </div>
-        <div class="relative h-[22px] md:hidden">
-          <button id="dropdown-button"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="22"
-              viewBox="0 0 32 22" fill="none">
-              <path d="M1 0.999996L31 0.999999" stroke="#ECCA44" stroke-width="2" stroke-linecap="round" />
-              <path d="M21 21L31 21" stroke="#ECCA44" stroke-width="2" stroke-linecap="round" />
-              <path d="M11 11L31 11" stroke="#ECCA44" stroke-width="2" stroke-linecap="round" />
-            </svg></button>
-          <div id="dropdown-menu" class=" absolute top-14 right-0 bg-white rounded-[20px] rounded-tr-none shadow-lg p-4
+    <header class="sticky top-0 z-50">
+        <nav
+            class="flex justify-between items-center m-5 outline outline-2 outline-greyBrand rounded-[20px] backdrop-blur-sm bg-white/50 p-4 md:py-3">
+            <a href="/"><img class="md:hidden" src="/AH_mobile_icon.svg" alt="Auction House Logo"><img
+                    class="hidden md:block" src="/AH_desktop_icon.svg" alt="Auction House Logo"></a>
+            <div class="hidden md:block">
+                <ul class="flex gap-3">
+                    <li class="flex"><a
+                            class="p-2 px-3 hover:bg-purpleBrand hover:text-white rounded-full transition-colors duration-200"
+                            href="/auctions/">All auctions</a></li>
+                    <li class="flex"><a
+                            class="p-2 px-3 hover:bg-purpleBrand hover:text-white rounded-full transition-colors duration-200"
+                            href="#">About us</a></li>
+                    <li class="flex"><a
+                            class="p-2 px-3 hover:bg-purpleBrand hover:text-white rounded-full transition-colors duration-200"
+                            href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-5">
+                <div id="credit-amount-container" class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="none">
+                        <circle cx="7.75113" cy="7.90002" r="7.40582" fill="#121400" />
+                        <path
+                            d="M7.82936 12.5873C5.00471 12.5873 2.9772 10.6291 2.9772 7.89108C2.9772 5.15308 5.00471 3.21222 7.82936 3.21222C9.47562 3.21222 10.8446 3.88806 11.5724 5.17041L10.3074 5.98488C9.71823 5.08376 8.81712 4.66787 7.81203 4.66787C6.0098 4.66787 4.65813 5.93289 4.65813 7.89108C4.65813 9.88393 6.0098 11.1316 7.81203 11.1316C8.81712 11.1316 9.71823 10.7157 10.3074 9.81462L11.5724 10.6118C10.8446 11.8941 9.47562 12.5873 7.82936 12.5873Z"
+                            fill="#ECCA44" />
+                        <rect x="7.70003" y="6.70047" width="1.69649" height="1.69649"
+                            transform="rotate(45 7.70003 6.70047)" fill="#ECCA44" />
+                    </svg>
+                    <p id="credit-amount" class="font-sans font-semibold text-2xl"></p>
+                </div>
+                <button id="create-listing-button"
+                    class="hidden w-8 h-8 bg-purpleBrand rounded-full text-white text-lg hover:bg-yellowBrand hover:text-blackBrand transition-colors duration-200">+</button>
+                <div class="hidden md:block">
+                    <div id="desktop-logout" class="hidden gap-3 items-center">
+                        <img id="desktop-avatar" class="w-8 h-8 rounded-full object-cover cursor-pointer"
+                            src="./src/assets/profile.jpg" alt="Profile Image">
+                        <p id="desktop-logout-button" class="font-sans underline-offset-2 underline cursor-pointer">Log
+                            out</p>
+                    </div>
+                    <div id="desktop-login">
+                        <a href="/login/" class="font-sans underline-offset-2 underline cursor-pointer">Sign in /
+                            Register</a>
+                    </div>
+                </div>
+                <div class="relative h-[22px] md:hidden">
+                    <button id="dropdown-button"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="22"
+                            viewBox="0 0 32 22" fill="none">
+                            <path d="M1 0.999996L31 0.999999" stroke="#ECCA44" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path d="M21 21L31 21" stroke="#ECCA44" stroke-width="2" stroke-linecap="round" />
+                            <path d="M11 11L31 11" stroke="#ECCA44" stroke-width="2" stroke-linecap="round" />
+                        </svg></button>
+                    <div id="dropdown-menu" class=" absolute top-14 right-0 bg-white rounded-[20px] rounded-tr-none shadow-lg p-4
           transition-all duration-200 ease-out transform origin-top-right opacity-0 scale-y-0 pointer-events-none">
-            <ul class="flex flex-col gap-2 w-40">
-              <li><a class="block p-2 w-full" href="/auctions/">All auctions</a></li>
-              <li><a class="block p-2 w-full" href="#">About us</a></li>
-              <li><a class="block p-2 w-full" href="#">Contact</a></li>
-              <li id="mobile-logout" class="hidden gap-3 items-center"><img id="mobile-avatar" src="/mockup.jpg"
-                  class="w-8 h-8 rounded-full object-cover cursor-pointer" alt="Profile Image">
-                <p id="mobile-logout-button" class="font-sans underline-offset-2 underline cursor-pointer py-2 w-28">Log
-                  out</p>
-              </li>
-              <li id="mobile-login"><a class="block p-2 w-full" href="/login/">Sign in / Register</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
+                        <ul class="flex flex-col gap-2 w-40">
+                            <li><a class="block p-2 w-full" href="/auctions/">All auctions</a></li>
+                            <li><a class="block p-2 w-full" href="#">About us</a></li>
+                            <li><a class="block p-2 w-full" href="#">Contact</a></li>
+                            <li id="mobile-logout" class="hidden gap-3 items-center"><img id="mobile-avatar"
+                                    src="/mockup.jpg" class="w-8 h-8 rounded-full object-cover cursor-pointer"
+                                    alt="Profile Image">
+                                <p id="mobile-logout-button"
+                                    class="font-sans underline-offset-2 underline cursor-pointer py-2 w-28">Log
+                                    out</p>
+                            </li>
+                            <li id="mobile-login"><a class="block p-2 w-full" href="/login/">Sign in / Register</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
     <main class="flex-grow">
         <article id="message">
         </article>
         <p class="text-sm mx-10" id="auction-path"></p>
         <div class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5 max-w-[1200px] md:mx-5 md:mt-5 lg:mx-auto">
-            <div
-                class="relative md:sticky md:top-[100px] flex aspect-square justify-center mx-5 mt-5 md:m-0 md:mb-[370px] lg:mb-[386px] bg-lightPurpleBrand rounded-[20px] lg:col-span-2">
+            <div class="relative md:sticky md:top-[100px] flex aspect-square justify-center mx-5 mt-5 md:m-0 md:mb-[370px] lg:mb-[386px] bg-lightPurpleBrand rounded-[20px] lg:col-span-2 animate-pulse"
+                id="auction-image-container">
                 <ul class="aspect-square rounded-[20px] overflow-hidden flex items-center justify-center">
                     <li class="w-full">
-                        <img class="w-full h-auto" src="/mockup.jpg" alt="Latest Auction Image" id="auction-image">
+                        <img class="w-full h-auto" src="/" alt="" id="auction-image">
                     </li>
                 </ul>
-                <div
-                    class="absolute bottom-2 right-[50%] translate-x-[50%] bg-purpleBrand/75 backdrop-blur-sm rounded-[20px] p-1">
-                    <ul class="flex gap-1">
-                        <li id="img-1" class="w-[6px] h-[6px] bg-white rounded-full"></li>
-                        <li id="img-2" class="w-[6px] h-[6px] bg-white/50 rounded-full"></li>
-                        <li id="img-3" class="w-[6px] h-[6px] bg-white/50 rounded-full"></li>
-                        <li id="img-4" class="w-[6px] h-[6px] bg-white/50 rounded-full"></li>
-                    </ul>
-                </div>
             </div>
             <section class="md:bg-yellowBrand md:rounded-[20px]">
                 <div class="flex flex-col mx-10 my-5">
-                    <h1 class="font-sans font-semibold text-2xl" id="auction-title">Women with crow</h1>
-                    <div class="flex gap-2 text-sm" id="auction-tags">
-                        <a href="">Art</a>
-                        <p>|</p>
-                        <a href="">Animals</a>
-                        <p>|</p>
-                        <a href="">Nature</a>
+                    <h1 class="font-sans font-semibold text-2xl bg-white/50 h-8 rounded w-3/4 animate-pulse"
+                        id="auction-title"></h1>
+                    <div class="flex gap-2 text-sm bg-white/50 h-4 rounded w-1/3 animate-pulse mt-2" id="auction-tags">
                     </div>
                 </div>
                 <hr class="mx-10 border-greyBrand">
                 <div class="flex items-center mx-10 my-5 gap-3" id="seller-profile">
-                    <a href=""><img class="w-10 h-10 rounded-full object-cover" src="/mockup.jpg"
-                            alt="Profile Image"></a>
-                    <a href=""><span class="font-semibold">testuser123</span> (14)</a>
+                    <div class="w-10 h-10 rounded-full bg-white/50 animate-pulse"></div>
+                    <div class="w-1/2 h-4 rounded-full bg-white/50 animate-pulse"></div>
                 </div>
                 <hr class="mx-10 border-greyBrand">
                 <div class="flex flex-col mx-10 my-5 gap-5">
@@ -136,12 +131,13 @@
                             <rect x="15.0001" y="12.5281" width="3.84908" height="3.84908"
                                 transform="rotate(45 15.0001 12.5281)" fill="#ECCA44" />
                         </svg>
-                        <p class="font-semibold text-6xl" id="auction-bids-count">333</p>
+                        <p class="font-semibold text-6xl w-[100px] h-[54px] rounded-full bg-white/50 animate-pulse"
+                            id="auction-bids-count"></p>
                     </div>
-                    <p><span class="font-sans underline-offset-2 underline cursor-pointer" id="auction-bids">3
+                    <p><span class="font-sans underline-offset-2 underline cursor-pointer" id="auction-bids">0
                             bids</span> | Ends in
-                        <span id="auction-ends-in">1h
-                            2min 3s</span>
+                        <span id="auction-ends-in">0h
+                            0m 0s</span>
                     </p>
                     <label for="bid"
                         class="relative outline outline-1 outline-blackBrand md:outline-lightYellowBrand rounded-full p-4 px-5 flex items-center gap-2 md:bg-lightYellowBrand ">
@@ -153,14 +149,8 @@
                 <hr class="mx-10 border-greyBrand">
                 <div class="flex flex-col m-10 mt-5 gap-5">
                     <p class="font-semibold text-2xl">Description</p>
-                    <p class="leading-snug" id="auction-description">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Quisquam, quaem.
-                        Lorem
-                        ipsum dolor sit amet
-                        consectetur adipisicing elit. Quisquam, quaem. Lorem ipsum dolor sit amet consectetur
-                        adipisicing
-                        elit. Quisquam, quaem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaem.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaem.</p>
+                    <p class="leading-snug w-full h-4 rounded-full bg-white/50 animate-pulse" id="auction-description">
+                    </p>
                 </div>
             </section>
             <section class="md:col-span-2">
@@ -170,22 +160,15 @@
                         <ul class="flex flex-nowrap gap-5" id="related-auctions">
                             <li
                                 class="aspect-square w-56 flex flex-col bg-purpleBrand rounded-[20px] relative max-w-[390px] w-full h-[220px] overflow-hidden">
-                                <img class="w-full h-2/3 object-cover rounded-[20px] outline-2 outline -outline-offset-2 outline-purpleBrand"
-                                    src="/mockup.jpg" alt="Latest Auction Image">
-                                <div class="flex gap-2 p-2 px-5 justify-between items-center">
+                                <div
+                                    class="w-full h-2/3 object-cover rounded-[20px] outline-2 outline -outline-offset-2 outline-purpleBrand bg-white/50 animate-pulse">
+                                </div>
+                                <div class="flex gap-3 p-3 px-5 justify-between items-center">
                                     <div>
-                                        <p class="text-white">Women with crow</p>
+                                        <div class="h-4 bg-white/50 rounded w-full animate-pulse mb-2"></div>
                                         <div class="flex items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
-                                                viewBox="0 0 15 15" fill="none">
-                                                <circle cx="7.40582" cy="7.59418" r="7.40582" fill="white" />
-                                                <path
-                                                    d="M7.48411 12.2814C4.65947 12.2814 2.63196 10.3232 2.63196 7.58524C2.63196 4.84723 4.65947 2.90637 7.48411 2.90637C9.13038 2.90637 10.4994 3.58221 11.2272 4.86456L9.96218 5.67903C9.37299 4.77792 8.47187 4.36202 7.46678 4.36202C5.66455 4.36202 4.31288 5.62704 4.31288 7.58524C4.31288 9.57808 5.66455 10.8258 7.46678 10.8258C8.47187 10.8258 9.37299 10.4099 9.96218 9.50877L11.2272 10.3059C10.4994 11.5883 9.13038 12.2814 7.48411 12.2814Z"
-                                                    fill="#632677" />
-                                                <rect x="7.35474" y="6.39465" width="1.69649" height="1.69649"
-                                                    transform="rotate(45 7.35474 6.39465)" fill="#632677" />
-                                            </svg>
-                                            <p class="font-semibold text-xl text-white">333</p>
+                                            <div class="h-4 bg-white/50 rounded w-10 animate-pulse"></div>
+                                            <div class="w-5 h-5 bg-white rounded-full"></div>
                                         </div>
                                     </div>
                                     <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19"
@@ -197,24 +180,17 @@
                                         </svg></a>
                                 </div>
                             </li>
-                            <li
+                                                        <li
                                 class="aspect-square w-56 flex flex-col bg-purpleBrand rounded-[20px] relative max-w-[390px] w-full h-[220px] overflow-hidden">
-                                <img class="w-full h-2/3 object-cover rounded-[20px] outline-2 outline -outline-offset-2 outline-purpleBrand"
-                                    src="/mockup.jpg" alt="Latest Auction Image">
-                                <div class="flex gap-2 p-2 px-5 justify-between items-center">
+                                <div
+                                    class="w-full h-2/3 object-cover rounded-[20px] outline-2 outline -outline-offset-2 outline-purpleBrand bg-white/50 animate-pulse">
+                                </div>
+                                <div class="flex gap-3 p-3 px-5 justify-between items-center">
                                     <div>
-                                        <p class="text-white">Women with crow</p>
+                                        <div class="h-4 bg-white/50 rounded w-full animate-pulse mb-2"></div>
                                         <div class="flex items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
-                                                viewBox="0 0 15 15" fill="none">
-                                                <circle cx="7.40582" cy="7.59418" r="7.40582" fill="white" />
-                                                <path
-                                                    d="M7.48411 12.2814C4.65947 12.2814 2.63196 10.3232 2.63196 7.58524C2.63196 4.84723 4.65947 2.90637 7.48411 2.90637C9.13038 2.90637 10.4994 3.58221 11.2272 4.86456L9.96218 5.67903C9.37299 4.77792 8.47187 4.36202 7.46678 4.36202C5.66455 4.36202 4.31288 5.62704 4.31288 7.58524C4.31288 9.57808 5.66455 10.8258 7.46678 10.8258C8.47187 10.8258 9.37299 10.4099 9.96218 9.50877L11.2272 10.3059C10.4994 11.5883 9.13038 12.2814 7.48411 12.2814Z"
-                                                    fill="#632677" />
-                                                <rect x="7.35474" y="6.39465" width="1.69649" height="1.69649"
-                                                    transform="rotate(45 7.35474 6.39465)" fill="#632677" />
-                                            </svg>
-                                            <p class="font-semibold text-xl text-white">333</p>
+                                            <div class="h-4 bg-white/50 rounded w-10 animate-pulse"></div>
+                                            <div class="w-5 h-5 bg-white rounded-full"></div>
                                         </div>
                                     </div>
                                     <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19"
@@ -226,24 +202,39 @@
                                         </svg></a>
                                 </div>
                             </li>
-                            <li
+                                                        <li
                                 class="aspect-square w-56 flex flex-col bg-purpleBrand rounded-[20px] relative max-w-[390px] w-full h-[220px] overflow-hidden">
-                                <img class="w-full h-2/3 object-cover rounded-[20px] outline-2 outline -outline-offset-2 outline-purpleBrand"
-                                    src="/mockup.jpg" alt="Latest Auction Image">
-                                <div class="flex gap-2 p-2 px-5 justify-between items-center">
+                                <div
+                                    class="w-full h-2/3 object-cover rounded-[20px] outline-2 outline -outline-offset-2 outline-purpleBrand bg-white/50 animate-pulse">
+                                </div>
+                                <div class="flex gap-3 p-3 px-5 justify-between items-center">
                                     <div>
-                                        <p class="text-white">Women with crow</p>
+                                        <div class="h-4 bg-white/50 rounded w-full animate-pulse mb-2"></div>
                                         <div class="flex items-center gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
-                                                viewBox="0 0 15 15" fill="none">
-                                                <circle cx="7.40582" cy="7.59418" r="7.40582" fill="white" />
-                                                <path
-                                                    d="M7.48411 12.2814C4.65947 12.2814 2.63196 10.3232 2.63196 7.58524C2.63196 4.84723 4.65947 2.90637 7.48411 2.90637C9.13038 2.90637 10.4994 3.58221 11.2272 4.86456L9.96218 5.67903C9.37299 4.77792 8.47187 4.36202 7.46678 4.36202C5.66455 4.36202 4.31288 5.62704 4.31288 7.58524C4.31288 9.57808 5.66455 10.8258 7.46678 10.8258C8.47187 10.8258 9.37299 10.4099 9.96218 9.50877L11.2272 10.3059C10.4994 11.5883 9.13038 12.2814 7.48411 12.2814Z"
-                                                    fill="#632677" />
-                                                <rect x="7.35474" y="6.39465" width="1.69649" height="1.69649"
-                                                    transform="rotate(45 7.35474 6.39465)" fill="#632677" />
-                                            </svg>
-                                            <p class="font-semibold text-xl text-white">333</p>
+                                            <div class="h-4 bg-white/50 rounded w-10 animate-pulse"></div>
+                                            <div class="w-5 h-5 bg-white rounded-full"></div>
+                                        </div>
+                                    </div>
+                                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19"
+                                            viewBox="0 0 18 19" fill="none">
+                                            <path d="M8.47357 17L15.9736 9.5L8.47357 2" stroke="#FFFFFF"
+                                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M2.00004 9.5L13.2499 9.5" stroke="#FFFFFF" stroke-width="3"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 5" />
+                                        </svg></a>
+                                </div>
+                            </li>
+                                                        <li
+                                class="aspect-square w-56 flex flex-col bg-purpleBrand rounded-[20px] relative max-w-[390px] w-full h-[220px] overflow-hidden">
+                                <div
+                                    class="w-full h-2/3 object-cover rounded-[20px] outline-2 outline -outline-offset-2 outline-purpleBrand bg-white/50 animate-pulse">
+                                </div>
+                                <div class="flex gap-3 p-3 px-5 justify-between items-center">
+                                    <div>
+                                        <div class="h-4 bg-white/50 rounded w-full animate-pulse mb-2"></div>
+                                        <div class="flex items-center gap-1">
+                                            <div class="h-4 bg-white/50 rounded w-10 animate-pulse"></div>
+                                            <div class="w-5 h-5 bg-white rounded-full"></div>
                                         </div>
                                     </div>
                                     <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19"

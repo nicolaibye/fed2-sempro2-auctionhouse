@@ -1,6 +1,6 @@
 import { updateProfileOverlay } from "/src/js/present/profile/updateProfileOverlay.js";
 
-export function userAdmin() {
+export function userAdmin(profile) {
   const bioButtons = document.getElementById("bio-buttons");
   bioButtons.innerHTML = "";
 
@@ -11,6 +11,6 @@ export function userAdmin() {
   editBioButton.addEventListener("click", () => {
     const body = document.querySelector("body");
     body.classList.add("overflow-hidden");
-    updateProfileOverlay();
+    updateProfileOverlay(profile);
   });
 }

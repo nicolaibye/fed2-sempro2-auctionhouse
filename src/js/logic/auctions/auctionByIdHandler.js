@@ -31,7 +31,6 @@ export async function auctionByIdHandler() {
     populateAuction(auction, seller);
     populateRecommendedAuctions();
     placeBid(auctionId);
-    console.log(auction.bids);
     const previousBidsButton = document.getElementById("auction-bids");
     previousBidsButton.addEventListener("click", () => {
       const body = document.querySelector("body");

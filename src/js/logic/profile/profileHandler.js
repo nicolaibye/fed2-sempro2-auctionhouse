@@ -12,9 +12,9 @@ export async function profileHandler() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const username = urlParams.get("username");
+  const profile = await fetchProfile(username);
 
   try {
-    const profile = await fetchProfile(username);
     if (profile) {
       userProfileBio(profile);
     }
@@ -40,6 +40,6 @@ export async function profileHandler() {
 
   const usernameStorage = getFromSessionStorage("username");
   if (username === usernameStorage) {
-    userAdmin();
+    userAdmin(profile);
   }
 }
