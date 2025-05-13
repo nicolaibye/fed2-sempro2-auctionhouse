@@ -58,7 +58,7 @@
                 <div class="hidden md:block">
                     <div id="desktop-logout" class="hidden gap-3 items-center">
                         <img id="desktop-avatar" class="w-8 h-8 rounded-full object-cover cursor-pointer"
-                            src="./src/assets/profile.jpg" alt="Profile Image">
+                            src="./src/assets/profile.jpg" alt="Profile Image" tabindex="0" role="button">
                         <p id="desktop-logout-button" class="font-sans underline-offset-2 underline cursor-pointer">Log
                             out</p>
                     </div>
@@ -134,17 +134,21 @@
                         <p class="font-semibold text-6xl w-[100px] h-[54px] rounded-full bg-white/50 animate-pulse"
                             id="auction-bids-count"></p>
                     </div>
-                    <p><span class="font-sans underline-offset-2 underline cursor-pointer" id="auction-bids">0
+                    <p><span tabindex="0" role="button" class="font-sans underline-offset-2 underline cursor-pointer"
+                            id="auction-bids">0
                             bids</span> | Ends in
                         <span id="auction-ends-in">0h
                             0m 0s</span>
                     </p>
-                    <label for="bid"
-                        class="relative outline outline-1 outline-blackBrand md:outline-lightYellowBrand rounded-full p-4 px-5 flex items-center gap-2 md:bg-lightYellowBrand ">
-                        <input type="number" name="bid" id="bid" placeholder="Amount"
-                            class="md:bg-lightYellowBrand placeholder:text-blackBrand outline-none">
-                        <button class="btn absolute right-3" id="place-bid-button">Place bid</button>
-                    </label>
+                    <div class="relative">
+                        <label for="bid"
+                            class="relative outline outline-1 outline-blackBrand md:outline-lightYellowBrand rounded-full p-4 px-5 flex items-center gap-2 md:bg-lightYellowBrand ">
+                            <input type="number" name="bid" id="bid" placeholder="Amount"
+                                class="md:bg-lightYellowBrand placeholder:text-blackBrand outline-none">
+                        </label>
+                        <button class="btn absolute right-3 top-1/2 -translate-y-1/2" id="place-bid-button">Place
+                            bid</button>
+                    </div>
                 </div>
                 <hr class="mx-10 border-greyBrand">
                 <div class="flex flex-col m-10 mt-5 gap-5">
@@ -180,7 +184,7 @@
                                         </svg></a>
                                 </div>
                             </li>
-                                                        <li
+                            <li
                                 class="aspect-square w-56 flex flex-col bg-purpleBrand rounded-[20px] relative max-w-[390px] w-full h-[220px] overflow-hidden">
                                 <div
                                     class="w-full h-2/3 object-cover rounded-[20px] outline-2 outline -outline-offset-2 outline-purpleBrand bg-white/50 animate-pulse">
@@ -202,7 +206,7 @@
                                         </svg></a>
                                 </div>
                             </li>
-                                                        <li
+                            <li
                                 class="aspect-square w-56 flex flex-col bg-purpleBrand rounded-[20px] relative max-w-[390px] w-full h-[220px] overflow-hidden">
                                 <div
                                     class="w-full h-2/3 object-cover rounded-[20px] outline-2 outline -outline-offset-2 outline-purpleBrand bg-white/50 animate-pulse">
@@ -224,7 +228,7 @@
                                         </svg></a>
                                 </div>
                             </li>
-                                                        <li
+                            <li
                                 class="aspect-square w-56 flex flex-col bg-purpleBrand rounded-[20px] relative max-w-[390px] w-full h-[220px] overflow-hidden">
                                 <div
                                     class="w-full h-2/3 object-cover rounded-[20px] outline-2 outline -outline-offset-2 outline-purpleBrand bg-white/50 animate-pulse">
@@ -255,7 +259,7 @@
     </main>
     <footer class="bg-purpleBrand text-white p-10 px-6 mt-20">
         <div class="flex flex-col gap-10 justify-between w-full max-w-[1200px]">
-            <a href="#"><img src="/AH_desktop_icon_white.svg" fill="#FFFFFF" alt="Auction House Logo"></a>
+            <a href="#"><img src="/AH_desktop_icon_white.svg" alt="Auction House Logo"></a>
             <ul class="flex flex-col gap-2">
                 <li><a href="#">About us</a></li>
                 <li><a href="/login/">Sign in / Register</a></li>
@@ -270,7 +274,7 @@
                                 <path
                                     d="M2.68223 0.887451C1.45667 0.887451 0.460007 1.88412 0.460007 3.10967V18.6652C0.460007 19.8908 1.45667 20.8875 2.68223 20.8875H10.039H13.1423H18.2378C19.4633 20.8875 20.46 19.8908 20.46 18.6652V3.10967C20.46 1.88412 19.4633 0.887451 18.2378 0.887451H2.68223ZM2.68223 3.10967H18.2378L18.24 18.6652H13.1423V14.2598H15.7703L16.161 11.2325H13.1597V9.30325C13.1597 8.42769 13.4037 7.83624 14.6592 7.83624H16.2456V5.13441C15.4734 5.05552 14.698 5.01717 13.9214 5.0194C11.6169 5.0194 10.039 6.42589 10.039 9.00811V11.2368H7.43483V14.2642H10.039V18.6652H2.68223V3.10967Z"
                                     fill="white" />
-                            </svg></svg></a>
+                            </svg></a>
                     </li>
                     <li>
                         <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
@@ -298,7 +302,7 @@
                             </svg>
                             <p class="text-white">Google Play</p>
                         </a></li>
-                    <div class="w-[1px] bg-white"></div>
+                    <li class="w-[1px] bg-white"></li>
                     <li><a href="#" class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="24"
                                 viewBox="0 0 21 24" fill="none">
                                 <path

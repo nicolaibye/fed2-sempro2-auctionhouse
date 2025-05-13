@@ -57,7 +57,7 @@
                 <div class="hidden md:block">
                     <div id="desktop-logout" class="hidden gap-3 items-center">
                         <img id="desktop-avatar" class="w-8 h-8 rounded-full object-cover cursor-pointer"
-                            src="./src/assets/profile.jpg" alt="Profile Image">
+                            src="./src/assets/profile.jpg" alt="Profile Image" tabindex="0" role="button">
                         <p id="desktop-logout-button" class="font-sans underline-offset-2 underline cursor-pointer">Log
                             out</p>
                     </div>
@@ -111,41 +111,41 @@
             </label>
         </div>
         <div class="flex flex-col items-center justify-center gap-4 m-5">
-            <form action="" id="filter-form" class="flex flex-col gap-3 mb-0">
+            <form id="filter-form" class="flex flex-col gap-3 mb-0">
                 <div class="flex flex-row justify-center gap-2">
-                    <span
+                    <span tabindex="0" role="button"
                         class="cursor-pointer bg-lightYellowBrand rounded-full p-2 px-4 sm:text-center hover:bg-purpleBrand hover:text-white transition-colors duration-200"
                         id="category-filter-button">Category</span>
                 </div>
                 <div class="hidden flex-wrap gap-2 justify-center" id="category-filter-container">
                     <div>
                         <input type="radio" id="category-1" name="category" class="hidden peer" value="Art">
-                        <label for="category-1"
+                        <label tabindex="0" for="category-1"
                             class="cursor-pointer py-1 px-2 bg-lightYellowBrand rounded-full hover:bg-purpleBrand hover:text-white transition-colors duration-200 peer-checked:bg-purpleBrand peer-checked:text-white">Art</label>
                     </div>
                     <div>
                         <input type="radio" id="category-2" name="category" class="hidden peer" value="Memes">
-                        <label for="category-2"
+                        <label tabindex="0" for="category-2"
                             class="cursor-pointer py-1 px-2 bg-lightYellowBrand rounded-full hover:bg-purpleBrand hover:text-white transition-colors duration-200 peer-checked:bg-purpleBrand peer-checked:text-white">Memes</label>
                     </div>
                     <div>
                         <input type="radio" id="category-3" name="category" class="hidden peer" value="Animals">
-                        <label for="category-3"
+                        <label tabindex="0" for="category-3"
                             class="cursor-pointer py-1 px-2 bg-lightYellowBrand rounded-full hover:bg-purpleBrand hover:text-white transition-colors duration-200 peer-checked:bg-purpleBrand peer-checked:text-white">Animals</label>
                     </div>
                     <div>
                         <input type="radio" id="category-4" name="category" class="hidden peer" value="GIF">
-                        <label for="category-4"
+                        <label tabindex="0" for="category-4"
                             class="cursor-pointer py-1 px-2 bg-lightYellowBrand rounded-full hover:bg-purpleBrand hover:text-white transition-colors duration-200 peer-checked:bg-purpleBrand peer-checked:text-white">GIF</label>
                     </div>
                     <div>
                         <input type="radio" id="category-5" name="category" class="hidden peer" value="Nature">
-                        <label for="category-5"
+                        <label tabindex="0" for="category-5"
                             class="cursor-pointer py-1 px-2 bg-lightYellowBrand rounded-full hover:bg-purpleBrand hover:text-white transition-colors duration-200 peer-checked:bg-purpleBrand peer-checked:text-white">Nature</label>
                     </div>
                     <div>
                         <input type="radio" id="category-6" name="category" class="hidden peer" value="Other">
-                        <label for="category-6"
+                        <label tabindex="0" for="category-6"
                             class="cursor-pointer py-1 px-2 bg-lightYellowBrand rounded-full hover:bg-purpleBrand hover:text-white transition-colors duration-200 peer-checked:bg-purpleBrand peer-checked:text-white">Other</label>
                     </div>
                 </div>
@@ -283,7 +283,7 @@
     </main>
     <footer class="bg-purpleBrand text-white p-10 px-6 mt-20">
         <div class="flex flex-col gap-10 justify-between w-full max-w-[1200px]">
-            <a href="#"><img src="/AH_desktop_icon_white.svg" fill="#FFFFFF" alt="Auction House Logo"></a>
+            <a href="#"><img src="/AH_desktop_icon_white.svg" alt="Auction House Logo"></a>
             <ul class="flex flex-col gap-2">
                 <li><a href="#">About us</a></li>
                 <li><a href="/login/">Sign in / Register</a></li>
@@ -298,7 +298,7 @@
                                 <path
                                     d="M2.68223 0.887451C1.45667 0.887451 0.460007 1.88412 0.460007 3.10967V18.6652C0.460007 19.8908 1.45667 20.8875 2.68223 20.8875H10.039H13.1423H18.2378C19.4633 20.8875 20.46 19.8908 20.46 18.6652V3.10967C20.46 1.88412 19.4633 0.887451 18.2378 0.887451H2.68223ZM2.68223 3.10967H18.2378L18.24 18.6652H13.1423V14.2598H15.7703L16.161 11.2325H13.1597V9.30325C13.1597 8.42769 13.4037 7.83624 14.6592 7.83624H16.2456V5.13441C15.4734 5.05552 14.698 5.01717 13.9214 5.0194C11.6169 5.0194 10.039 6.42589 10.039 9.00811V11.2368H7.43483V14.2642H10.039V18.6652H2.68223V3.10967Z"
                                     fill="white" />
-                            </svg></svg></a>
+                            </svg></a>
                     </li>
                     <li>
                         <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
@@ -326,7 +326,7 @@
                             </svg>
                             <p class="text-white">Google Play</p>
                         </a></li>
-                    <div class="w-[1px] bg-white"></div>
+                    <li class="w-[1px] bg-white"></li>
                     <li><a href="#" class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="24"
                                 viewBox="0 0 21 24" fill="none">
                                 <path

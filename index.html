@@ -57,7 +57,7 @@
         <div class="hidden md:block">
           <div id="desktop-logout" class="hidden gap-3 items-center">
             <img id="desktop-avatar" class="w-8 h-8 rounded-full object-cover cursor-pointer"
-              src="./src/assets/profile.jpg" alt="Profile Image">
+              src="./src/assets/profile.jpg" alt="Profile Image" tabindex="0" role="button">
             <p id="desktop-logout-button" class="font-sans underline-offset-2 underline cursor-pointer">Log
               out</p>
           </div>
@@ -96,7 +96,7 @@
       class="flex flex-col items-center justify-center gap-4 m-5 mb-10 p-5 rounded-[20px] bg-yellowBrand md:max-w-[700px] md:mx-auto">
       <h1 class="text-3xl text-center font-sans font-semibold uppercase tracking-wider md:text-5xl">Welcome to <span
           class="font-serif font-normal text-[28px] md:text-[42px]">Auction House</span></h1>
-      <label for="search" class="flex items-center bg-lightYellowBrand rounded-full p-1 w-full max-w-[780px]">
+      <label for="home-search" class="flex items-center bg-lightYellowBrand rounded-full p-1 w-full max-w-[780px]">
         <span class="block p-2 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16"
             viewBox="0 0 17 16" fill="none">
             <path
@@ -108,13 +108,13 @@
       </label>
     </div>
     <section>
-      <h1 class="text-center font-sans font-semibold uppercase tracking-wider text-3xl">Category</h1>
+      <h2 class="text-center font-sans font-semibold uppercase tracking-wider text-3xl">Category</h2>
       <div>
         <ul class="flex flex-wrap gap-10 justify-center m-5 mb-10">
           <li>
-            <a href="/auctions/?category=art">
-              <div
-                class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden md:hover:scale-105 transition-transform duration-200">
+            <a class="group block focus:outline-none" href="/auctions/?category=art">
+              <div 
+                class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden group-focus:scale-105 group-focus:scale-105 md:hover:scale-105 transition-transform duration-200">
                 <img
                   src="https://plus.unsplash.com/premium_photo-1664272436668-78437b92929e?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   class="w-full h-full object-cover" alt="Category Art Image">
@@ -125,9 +125,9 @@
             </a>
           </li>
           <li>
-            <a href="/auctions/?category=memes">
+            <a class="group block focus:outline-none" href="/auctions/?category=memes">
               <div
-                class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden md:hover:scale-105 transition-transform duration-200">
+                class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden group-focus:scale-105 md:hover:scale-105 transition-transform duration-200">
                 <img
                   src="https://images.unsplash.com/photo-1621739165914-7155e5d4816e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   class="w-full h-full object-cover" alt="Category Art Image">
@@ -138,9 +138,9 @@
             </a>
           </li>
           <li>
-            <a href="/auctions/?category=animals">
+            <a class="group block focus:outline-none" href="/auctions/?category=animals">
               <div
-                class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden md:hover:scale-105 transition-transform duration-200">
+                class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden group-focus:scale-105 md:hover:scale-105 transition-transform duration-200">
                 <img
                   src="https://plus.unsplash.com/premium_photo-1661963813924-d75bc5202873?q=80&w=1493&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   class="w-full h-full object-cover" alt="Category Art Image">
@@ -151,9 +151,9 @@
             </a>
           </li>
           <li>
-            <a href="/auctions/?category=gif">
+            <a class="group block focus:outline-none" href="/auctions/?category=gif">
               <div
-                class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden md:hover:scale-105 transition-transform duration-200">
+                class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden group-focus:scale-105 md:hover:scale-105 transition-transform duration-200">
                 <img
                   src="https://images.unsplash.com/photo-1671811636280-ffd59649e424?q=80&w=1581&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   class="w-full h-full object-cover" alt="Category Art Image">
@@ -164,9 +164,9 @@
             </a>
           </li>
           <li>
-            <a href="/auctions/?category=nature">
+            <a class="group block focus:outline-none" href="/auctions/?category=nature">
               <div
-                class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden md:hover:scale-105 transition-transform duration-200">
+                class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden group-focus:scale-105 md:hover:scale-105 transition-transform duration-200">
                 <img
                   src="https://images.unsplash.com/photo-1529419412599-7bb870e11810?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   class="w-full h-full object-cover" alt="Category Art Image">
@@ -177,9 +177,9 @@
             </a>
           </li>
           <li>
-            <a href="/auctions/?category=other">
+            <a class="group block focus:outline-none" href="/auctions/?category=other">
               <div
-                class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden md:hover:scale-105 transition-transform duration-200">
+                class="h-[140px] w-[140px] relative rounded-[20px] overflow-hidden group-focus:scale-105 md:hover:scale-105 transition-transform duration-200">
                 <img
                   src="https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   class="w-full h-full object-cover" alt="Category Art Image">
@@ -193,7 +193,7 @@
       </div>
     </section>
     <section>
-      <h1 class="text-center font-sans font-semibold uppercase tracking-wider text-3xl">Latest Auctions</h1>
+      <h3 class="text-center font-sans font-semibold uppercase tracking-wider text-3xl">Latest Auctions</h3>
       <div class="flex flex-col gap-5 m-5 items-center">
         <article id="message">
         </article>
@@ -268,7 +268,7 @@
       </div>
     </section>
     <section>
-      <h1 class="text-center font-sans font-semibold uppercase tracking-wider text-3xl mt-10 md:mt-20">Articles</h1>
+      <h4 class="text-center font-sans font-semibold uppercase tracking-wider text-3xl mt-10 md:mt-20">Articles</h4>
       <div>
         <ul class="flex flex-wrap gap-5 justify-center m-5">
           <li class="flex bg-lightYellowBrand rounded-[20px] relative max-w-[360px] h-[160px] overflow-hidden">
@@ -325,7 +325,7 @@
   </main>
   <footer class="bg-purpleBrand text-white p-10 px-6 mt-20">
     <div class="flex flex-col gap-10 justify-between w-full max-w-[1200px]">
-      <a href="#"><img src="/AH_desktop_icon_white.svg" fill="#FFFFFF" alt="Auction House Logo"></a>
+      <a href="#"><img src="/AH_desktop_icon_white.svg" alt="Auction House Logo"></a>
       <ul class="flex flex-col gap-2">
         <li><a href="#">About us</a></li>
         <li><a href="/login/">Sign in / Register</a></li>
@@ -339,7 +339,7 @@
                 <path
                   d="M2.68223 0.887451C1.45667 0.887451 0.460007 1.88412 0.460007 3.10967V18.6652C0.460007 19.8908 1.45667 20.8875 2.68223 20.8875H10.039H13.1423H18.2378C19.4633 20.8875 20.46 19.8908 20.46 18.6652V3.10967C20.46 1.88412 19.4633 0.887451 18.2378 0.887451H2.68223ZM2.68223 3.10967H18.2378L18.24 18.6652H13.1423V14.2598H15.7703L16.161 11.2325H13.1597V9.30325C13.1597 8.42769 13.4037 7.83624 14.6592 7.83624H16.2456V5.13441C15.4734 5.05552 14.698 5.01717 13.9214 5.0194C11.6169 5.0194 10.039 6.42589 10.039 9.00811V11.2368H7.43483V14.2642H10.039V18.6652H2.68223V3.10967Z"
                   fill="white" />
-              </svg></svg></a>
+              </svg></a>
           </li>
           <li>
             <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
@@ -365,7 +365,7 @@
               </svg>
               <p class="text-white">Google Play</p>
             </a></li>
-          <div class="w-[1px] bg-white"></div>
+          <li class="w-[1px] bg-white"></li>
           <li><a href="#" class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="24"
                 viewBox="0 0 21 24" fill="none">
                 <path

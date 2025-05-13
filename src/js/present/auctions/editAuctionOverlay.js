@@ -21,44 +21,44 @@ export async function editAuctionOverlay(auction) {
               </article>
             <img id="overlay-image" class="w-full h-40 rounded-[20px] object-contain bg-lightPurpleBrand"
                 src="${auctionImage}" alt="${auctionImageAlt}">
-              <form action="" class="flex flex-col gap-3 w-full" id="overlay-form">
+              <form class="flex flex-col gap-3 w-full" id="overlay-form">
                 <div class="flex flex-col sm:flex-row justify-between gap-2">
                     <input type="title"
                         class="bg-lightYellowBrand rounded-full p-2 px-4 grow-[2] placeholder:text-blackBrand"
                         name="title" id="title" placeholder="Title" required>
-                    <span
+                    <span tabindex="0" role="button"
                         class="grow cursor-pointer bg-lightYellowBrand rounded-full p-2 px-4 sm:text-center hover:bg-purpleBrand hover:text-white transition-colors duration-200"
                         id="category-button">Category</span>
                 </div>
                 <div class="hidden flex-wrap gap-2 justify-center" id="category-container">
                     <div>
                         <input type="checkbox" id="tag-1" name="tag-1" class="hidden peer" value="Art">
-                        <label for="tag-1"
+                        <label tabindex="0" for="tag-1"
                             class="cursor-pointer py-1 px-2 bg-lightYellowBrand rounded-full hover:bg-purpleBrand hover:text-white transition-colors duration-200 peer-checked:bg-purpleBrand peer-checked:text-white">Art</label>
                     </div>
                     <div>
                         <input type="checkbox" id="tag-2" name="tag-2" class="hidden peer" value="Memes">
-                        <label for="tag-2"
+                        <label tabindex="0" for="tag-2"
                             class="cursor-pointer py-1 px-2 bg-lightYellowBrand rounded-full hover:bg-purpleBrand hover:text-white transition-colors duration-200 peer-checked:bg-purpleBrand peer-checked:text-white">Memes</label>
                     </div>
                     <div>
                         <input type="checkbox" id="tag-3" name="tag-3" class="hidden peer" value="Animals">
-                        <label for="tag-3"
+                        <label tabindex="0" for="tag-3"
                             class="cursor-pointer py-1 px-2 bg-lightYellowBrand rounded-full hover:bg-purpleBrand hover:text-white transition-colors duration-200 peer-checked:bg-purpleBrand peer-checked:text-white">Animals</label>
                     </div>
                     <div>
                         <input type="checkbox" id="tag-4" name="tag-4" class="hidden peer" value="GIF">
-                        <label for="tag-4"
+                        <label tabindex="0" for="tag-4"
                             class="cursor-pointer py-1 px-2 bg-lightYellowBrand rounded-full hover:bg-purpleBrand hover:text-white transition-colors duration-200 peer-checked:bg-purpleBrand peer-checked:text-white">GIF</label>
                     </div>
                     <div>
                         <input type="checkbox" id="tag-5" name="tag-5" class="hidden peer" value="Nature">
-                        <label for="tag-5"
+                        <label tabindex="0" for="tag-5"
                             class="cursor-pointer py-1 px-2 bg-lightYellowBrand rounded-full hover:bg-purpleBrand hover:text-white transition-colors duration-200 peer-checked:bg-purpleBrand peer-checked:text-white">Nature</label>
                     </div>
                     <div>
                         <input type="checkbox" id="tag-6" name="tag-6" class="hidden peer" value="Other">
-                        <label for="tag-6"
+                        <label tabindex="0" for="tag-6"
                             class="cursor-pointer py-1 px-2 bg-lightYellowBrand rounded-full hover:bg-purpleBrand hover:text-white transition-colors duration-200 peer-checked:bg-purpleBrand peer-checked:text-white">Other</label>
                     </div>
                 </div>
@@ -66,8 +66,8 @@ export async function editAuctionOverlay(auction) {
                     name="description" id="description" cols="30" rows="5" placeholder="Description"></textarea>
                   <div class="flex flex-wrap justify-center items-center gap-3">
                       <button id="update-button" class="btn" type="submit">Update</button>
-                      <span class="btn text-center py-1 cursor-pointer bg-errorDark outline-errorDark hover:text-errorDark" id="delete-button">Delete</span>
-                      <span class="btn text-center py-1 cursor-pointer" id="cancel-button">Cancel</span>
+                      <span tabindex="0" role="button" class="btn text-center py-1 cursor-pointer bg-errorDark outline-errorDark hover:text-errorDark" id="delete-button">Delete</span>
+                      <span tabindex="0" role="button" class="btn text-center py-1 cursor-pointer" id="cancel-button">Cancel</span>
                   </div>
               </form>
           </div>

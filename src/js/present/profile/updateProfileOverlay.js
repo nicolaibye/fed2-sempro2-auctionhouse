@@ -13,7 +13,7 @@ export function updateProfileOverlay(profile) {
             <article id="overlay-message" class="hidden">
             </article>
             <img id="overlay-image" class="w-40 h-40 rounded-full object-cover" src="${profile.data.avatar.url}" alt="">
-            <form action="" class="flex flex-col gap-5 w-full" id="overlay-form">
+            <form class="flex flex-col gap-5 w-full" id="overlay-form">
                 <input class="bg-lightYellowBrand rounded-full p-2 px-4 w-full placeholder:text-blackBrand" type="text"
                     name="avatar" id="avatar" placeholder="Avatar URL" title="Please enter a valid URL starting with http:// or https://" pattern="https?://.*">
                 <input class="bg-lightYellowBrand rounded-full p-2 px-4 w-full placeholder:text-blackBrand" type="text"
@@ -22,7 +22,7 @@ export function updateProfileOverlay(profile) {
                     name="bio" id="bio" cols="30" rows="10" placeholder="Bio"></textarea>
                 <div class="flex justify-between items-center">
                     <button id="update-button" class="btn" type="submit">Update</button>
-                    <span class="btn text-center py-1 cursor-pointer" id="cancel-button">Cancel</span>
+                    <span tabindex="0" role="button" class="btn text-center py-1 cursor-pointer" id="cancel-button">Cancel</span>
                 </div>
             </form>
         </div>
