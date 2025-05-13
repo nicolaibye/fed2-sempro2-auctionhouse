@@ -36,8 +36,16 @@ export function categoryHandler(form) {
       });
       const newUrl = `${baseUrl}?${newParams.toString()}`;
       history.replaceState(null, "", newUrl);
-      const filteredAuctions = await filteredAuctionsByCategory(newCategory);
-      createAuctions("#auctionsAll", filteredAuctions);
+      try {
+        const filteredAuctions = await filteredAuctionsByCategory(newCategory);
+        createAuctions("#auctionsAll", filteredAuctions);
+      } catch (error) {
+        console.error(
+          "There was a problem with the fetch operation:",
+          error.message,
+        );
+        displayMessage("#message", "error", error.message);
+      }
     });
   });
 
@@ -56,8 +64,16 @@ export function categoryHandler(form) {
       });
       const url = window.location.origin + window.location.pathname;
       history.replaceState(null, "", url);
-      const allAuctions = await fetchAuctions();
-      createAuctions("#auctionsAll", allAuctions);
+      try {
+        const allAuctions = await fetchAuctions();
+        createAuctions("#auctionsAll", allAuctions);
+      } catch (error) {
+        console.error(
+          "There was a problem with the fetch operation:",
+          error.message,
+        );
+        displayMessage("#message", "error", error.message);
+      }
     }
   });
 }
