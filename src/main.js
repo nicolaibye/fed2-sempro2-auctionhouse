@@ -6,8 +6,10 @@ import { registerHandler } from "./js/logic/profile/registerHandler";
 import { navHandler } from "./js/present/nav/navHandler";
 import { categoryHandler } from "./js/logic/auctions/categoryHandler";
 import "./style.css";
+import { tabindexEnter } from "./js/helpers/tabindexEnter";
 
 navHandler();
+tabindexEnter();
 
 function router() {
   const pathname = window.location.pathname;

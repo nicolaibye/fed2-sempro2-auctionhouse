@@ -131,6 +131,11 @@ export function createAuctionCard(auction) {
       const body = document.querySelector("body");
       body.classList.add("overflow-hidden");
       editAuctionOverlay(auction);
+      const overlay = document.getElementById("overlay-container");
+      const focusElements = overlay.querySelector("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])");
+      if (focusElements) {
+        focusElements.focus();
+      }
     };
   }
 

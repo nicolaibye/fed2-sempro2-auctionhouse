@@ -15,6 +15,11 @@ export async function navHandler() {
     // create listing button
     createButton.addEventListener("click", () => {
       createAuctionOverlay();
+      const overlay = document.getElementById("overlay-auction-container");
+      const focusElements = overlay.querySelector("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])");
+      if (focusElements) {
+        focusElements.focus();
+      }
       const body = document.querySelector("body");
       body.classList.add("overflow-hidden");
     })
