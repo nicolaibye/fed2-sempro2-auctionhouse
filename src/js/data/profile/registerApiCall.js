@@ -1,5 +1,22 @@
 import { registerUrl } from "/src/js/const/api.js";
 
+/**
+ *
+ * @param {object} data
+ * @returns {object} registerData
+ * @example
+ * ```js
+ * const data = {
+ *   name: "John Doe",
+ *   email: "qjK7v@example.com",
+ *   password: "password123",
+ * };
+ * const registerData = await registerApiCall(data);
+ * // Expected output:
+ * // returns response
+ * ```
+ */
+
 export async function registerApiCall(data) {
   const options = {
     method: "POST",
