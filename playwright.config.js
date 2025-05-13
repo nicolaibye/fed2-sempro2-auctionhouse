@@ -6,8 +6,7 @@ import { defineConfig, devices } from "@playwright/test";
  * https://github.com/motdotla/dotenv
  */
 import dotenv from "dotenv";
-import path from "path";
-dotenv.config({ path: path.resolve(__dirname, ".env") });
+dotenv.config();
 
 /**
  * @see https://playwright.dev/docs/test-configuration
@@ -15,7 +14,7 @@ dotenv.config({ path: path.resolve(__dirname, ".env") });
 export default defineConfig({
   testDir: "./test/e2e",
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -26,8 +25,7 @@ export default defineConfig({
   reporter: "html",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://127.0.0.1:3000',
+    baseURL: "http://localhost:5173",
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
@@ -76,8 +74,5 @@ export default defineConfig({
     command: "npm run dev",
     url: "http://localhost:5173",
     reuseExistingServer: !process.env.CI,
-  },
-  use: {
-    baseURL: "http://localhost:5173",
   },
 });
