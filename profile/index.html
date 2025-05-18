@@ -17,8 +17,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap"
         rel="stylesheet">
-  <link rel="stylesheet" href="/src/style.css" />
-  <script type="module" src="/src/main.js"></script>
+    <link rel="stylesheet" href="/src/style.css" />
+    <script type="module" src="/src/main.js"></script>
     <title>Auction House</title>
 </head>
 
@@ -57,7 +57,8 @@
                     class="hidden w-8 h-8 bg-purpleBrand rounded-full text-white text-lg hover:bg-yellowBrand hover:text-blackBrand transition-colors duration-200">+</button>
                 <div class="hidden md:block">
                     <div id="desktop-logout" class="hidden gap-3 items-center">
-                        <img id="desktop-avatar" class="w-8 h-8 rounded-full object-cover cursor-pointer"
+                        <img id="desktop-avatar"
+                            class="w-8 h-8 rounded-full object-cover cursor-pointer outline outline-3 outline-yellowBrand"
                             src="./src/assets/profile.jpg" alt="Profile Image" tabindex="0" role="button">
                         <p id="desktop-logout-button" class="font-sans underline-offset-2 underline cursor-pointer">Log
                             out</p>
@@ -78,11 +79,11 @@
                     <div id="dropdown-menu" class=" absolute top-14 right-0 bg-white rounded-[20px] rounded-tr-none shadow-lg p-4
           transition-all duration-200 ease-out transform origin-top-right opacity-0 scale-y-0 pointer-events-none">
                         <ul class="flex flex-col gap-2 w-40">
-                            <li><a class="block p-2 w-full" href="/auctions/">All auctions</a></li>
-                            <li><a class="block p-2 w-full" href="#">About us</a></li>
-                            <li><a class="block p-2 w-full" href="#">Contact</a></li>
-                            <li id="mobile-logout" class="hidden gap-3 items-center"><img id="mobile-avatar"
-                                    src="/mockup.jpg" class="w-8 h-8 rounded-full object-cover cursor-pointer"
+                            <li><a class="block p-2 px-4 w-full rounded-full" href="/auctions/">All auctions</a></li>
+                            <li><a class="block p-2 px-4 w-full rounded-full" href="#">About us</a></li>
+                            <li><a class="block p-2 px-4 w-full rounded-full" href="#">Contact</a></li>
+                            <li id="mobile-logout" class="hidden gap-3 items-center"><img id="mobile-avatar" src="/"
+                                    class="w-8 h-8 rounded-full object-cover cursor-pointer outline outline-3 outline-yellowBrand"
                                     alt="Profile Image">
                                 <p id="mobile-logout-button"
                                     class="font-sans underline-offset-2 underline cursor-pointer py-2 w-28">Log
