@@ -1,9 +1,8 @@
 import { liveCountdown } from "../../helpers/liveCountdown";
 import { liveBidsCount } from "/src/js/helpers/liveBidsCount.js";
 
-export function populateAuction(auction, seller) {
-  const { title, media, tags, endsAt, bids } = auction;
-  const { name, avatar, _count } = seller.data;
+export function populateAuction(auction) {
+  const { title, media, tags, endsAt, bids, seller } = auction;
 
   const auctionPath = document.getElementById("auction-path");
   auctionPath.innerHTML = "";
@@ -70,12 +69,12 @@ export function populateAuction(auction, seller) {
   const sellerProfile = document.getElementById("seller-profile");
   sellerProfile.innerHTML = "";
   const sellerImage = document.createElement("a");
-  sellerImage.href = `/profile/?username=${name}`;
-  sellerImage.innerHTML = `<img class="w-10 h-10 rounded-full object-cover" src="${avatar.url}" alt="${avatar.alt}">`;
+  sellerImage.href = `/profile/?username=${seller.name}`;
+  sellerImage.innerHTML = `<img class="w-10 h-10 rounded-full object-cover" src="${seller.avatar.url}" alt="${seller.avatar.alt}">`;
   sellerProfile.append(sellerImage);
   const sellerUsername = document.createElement("a");
-  sellerUsername.href = `/profile/?username=${name}`;
-  sellerUsername.innerHTML = `<span class="font-semibold">${name}</span> (${_count.listings})`;
+  sellerUsername.href = `/profile/?username=${seller.name}`;
+  sellerUsername.innerHTML = `<span class="font-semibold">${seller.name}</span>`;
   sellerProfile.append(sellerUsername);
 
   const auctionBidsCount = document.getElementById("auction-bids-count");
