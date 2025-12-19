@@ -12,7 +12,17 @@ export async function profileHandler() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const username = urlParams.get("username");
+  const token = getFromSessionStorage("token");
   const profile = await fetchProfile(username);
+
+  if (!token) {
+    displayMessage(
+      "#message",
+      "error",
+      "You must be logged in to see this page.",
+    );
+    return;
+  }
 
   try {
     if (profile) {

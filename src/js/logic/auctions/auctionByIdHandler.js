@@ -14,21 +14,7 @@ export async function auctionByIdHandler() {
   try {
     const auction = await fetchAuctionById(auctionId);
 
-    if (!token) {
-      const main = document.getElementsByTagName("main")[0];
-      main.classList.add("flex", "flex-col", "items-center");
-      main.innerHTML = "";
-      const message = document.createElement("article");
-      message.id = "message";
-      message.classList.add("message", "font-sans");
-      message.classList.add("warning");
-      message.textContent = "Please login to view this auction.";
-      main.append(message);
-      return;
-    }
-
-    const seller = await fetchProfile(auction.seller.name);
-    populateAuction(auction, seller);
+    populateAuction(auction);
     populateRecommendedAuctions();
     placeBid(auctionId);
     const previousBidsButton = document.getElementById("auction-bids");

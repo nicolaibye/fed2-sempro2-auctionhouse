@@ -9,6 +9,7 @@ export function createAuctionCard(auction) {
   const auctionCard = document.createElement("li");
   auctionCard.className =
     "flex flex-col bg-yellowBrand rounded-[20px] relative max-w-[390px] w-full h-[220px] overflow-hidden";
+  auctionCard.id = id;
 
   const timeContainer = document.createElement("div");
   timeContainer.className =
@@ -132,7 +133,9 @@ export function createAuctionCard(auction) {
       body.classList.add("overflow-hidden");
       editAuctionOverlay(auction);
       const overlay = document.getElementById("overlay-container");
-      const focusElements = overlay.querySelector("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])");
+      const focusElements = overlay.querySelector(
+        "button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])",
+      );
       if (focusElements) {
         focusElements.focus();
       }
